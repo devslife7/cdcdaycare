@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import heroBackground from "@/public/images/heroImage.jpg"
+import heroBackground from "@/public/img/daycarehero.webp"
 import Button from "./shared/Button"
 
 export default function Hero() {
@@ -12,7 +12,7 @@ export default function Hero() {
           className="object-cover w-full h-full"
           placeholder="blur"
           priority
-          alt="Hero Kitchen"
+          alt="Day Care Children"
         />
       </div>
       <div className="h-full bg-black bg-opacity-70">
@@ -25,7 +25,7 @@ export default function Hero() {
             </p>
             <Link href="/gallery">
               <Button size="large" className="lg:text-lg">
-                Explore Gallery
+                Get started
               </Button>
             </Link>
           </div>
