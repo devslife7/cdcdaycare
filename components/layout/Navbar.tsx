@@ -18,11 +18,11 @@ const navLinks: NavLink[] = [
     href: "/",
   },
   {
-    label: "Gallery",
-    href: "/gallery",
+    label: "Philosophy",
+    href: "/philosophy",
   },
   {
-    label: "About",
+    label: "About Us",
     href: "/about",
   },
   {
@@ -57,11 +57,7 @@ export default function Navbar() {
   const renderNavLinks = () => {
     const isActive = (link: string) => (pathname === link ? "text-primary" : "hover:text-gray-400")
     return navLinks.map((link, index) => (
-      <Link
-        key={index}
-        href={link.href}
-        className={`px-2 leading-7 transition-all text-lg ${isActive(link.href)}`}
-      >
+      <Link key={index} href={link.href} className={`px-2 leading-7 transition-all ${isActive(link.href)}`}>
         {link.label}
       </Link>
     ))
@@ -72,25 +68,18 @@ export default function Navbar() {
       <div className={classNames({ "h-20": isHome() })}></div>
       <header
         className={classNames("fixed top-0 z-10 w-full text-white transition-all duration-300 ease-in-out", {
-          "bg-background": scrollNav || isHome(),
+          "bg-secondary": scrollNav || isHome(),
         })}
       >
         <nav className="flex items-center justify-between h-20 my-container">
           <div className="flex items-center lg:flex-1">
             <Link href="/">
-              <span className="text-2xl font-semibold">
-                <span className="text-primary">DSB</span> General Construction
+              <span className="text-xl font-semibold">
+                <span className="text-primary">CDC</span> Day Care
               </span>
             </Link>
           </div>
           <div className="hidden lg:flex lg:gap-x-7">{renderNavLinks()}</div>
-          <a
-            href="tel:999-999-9999"
-            className="items-center hidden px-4 py-2 ml-8 leading-7 transition-all duration-300 ease-in-out border-2 rounded-md border-primary lg:flex hover:bg-primary"
-          >
-            <FaPhone className="inline-block text-xl text-primary" />
-            <span className="ml-3 text-lg">999-999-9999</span>
-          </a>
           <div className="flex lg:hidden">
             <button
               type="button"
