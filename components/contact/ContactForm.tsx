@@ -34,13 +34,13 @@ export default function ContactForm() {
         let formData = document.createElement("form")
         formData.innerHTML = ` 
             <input name="from_name" value="${data.name}" />
-            <input name="email" value="${data.email}" />
-            <input name="phone" value="${data.phone}" />
-            <textarea name="message" value="${data.message}" />
+            <input name="from_email" value="${data.email}" />
+            <input name="from_phone" value="${data.phone}" />
+            <textarea name="from_message">${data.message}</textarea>
         
         `
         console.log("formData:", formData)
-        emailjs.sendForm("service_b27ezi3", "template_wd283mr", formData, "hpeVPBIjR0dTtIqex").then(
+        emailjs.sendForm("service_b27ezi3", "template_c4rqhh1", formData, "hpeVPBIjR0dTtIqex").then(
             result => {
                 console.log(result.text)
                 setIsLoading(false)
