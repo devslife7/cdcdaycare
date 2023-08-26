@@ -18,7 +18,7 @@ export default function Hero() {
             <div className="h-full bg-black bg-opacity-50">
                 <div className="flex items-center h-full text-white my-container">
                     <div className="max-w-4xl py-14 lg:py-20">
-                        <h1 className="text-4xl font-extrabold md:text-5xl lg:text-7xl relative">
+                        <h1 className="text-5xl font-extrabold md:text-5xl lg:text-7xl relative">
                             A Safe Haven for
                             <br /> Growing Minds
                             <span className="font-medium text-primary absolute left-1 -top-[4.5rem]">

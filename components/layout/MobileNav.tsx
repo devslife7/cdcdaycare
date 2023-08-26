@@ -27,7 +27,7 @@ export default function MobileNav({ mobileMenuOpen, setMobileMenuOpen, navLinks 
             open={mobileMenuOpen}
             onClose={setMobileMenuOpen}
         >
-            <div className="fixed inset-0 z-10" />
+            {/* <div className="fixed inset-0 z-10" />
             <Dialog.Panel className="fixed top-0 bottom-0 right-0 z-10 w-full overflow-y-auto bg-background bg-opacity-[0.99] text-white px-6 py-6 max-w-[15rem] sm:ring-1 sm:ring-gray-900/10">
                 <div className="flex items-center justify-between">
                     <MdHomeWork className="text-4xl text-primary" />
@@ -54,7 +54,7 @@ export default function MobileNav({ mobileMenuOpen, setMobileMenuOpen, navLinks 
                         </div>
                     </div>
                 </div>
-            </Dialog.Panel>
+            </Dialog.Panel> */}
         </Dialog>
     )
 }

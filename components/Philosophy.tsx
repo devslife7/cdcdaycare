@@ -4,8 +4,8 @@ import philosophyimg from "@/public/img/philosophyimg.jpg"
 export default function Philosophy() {
     return (
         <section id="philosophy" className="bg-secondary py-24 text-white">
-            <div className="my-container flex justify-evenly">
-                <div className="max-w-xl space-y-6">
+            <div className="my-container lg:flex lg:justify-evenly space-y-10">
+                <div className="max-w-xl space-y-6 lg:px-4 mx-auto">
                     <h2 className="text-primary text-5xl mt-8 relative">
                         PHILOSOPHY<span className=" absolute left-0 top-2">___</span>
                     </h2>
@@ -16,7 +16,7 @@ export default function Philosophy() {
                         fun-filled programs that engage the whole child's developing mind and body.
                     </p>
                 </div>
-                <Image src={philosophyimg} alt="Child doing homework" />
+                <Image className="mx-auto" src={philosophyimg} alt="Child doing homework" />
             </div>
         </section>
     )

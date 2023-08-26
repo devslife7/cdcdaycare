@@ -6,7 +6,7 @@ export default function KeyPoints() {
     return (
         <section className="my-container">
             <div className="flex flex-wrap justify-start gap-12 my-20 md:gap-0 lg:justify-evenly">
-                <div className="max-w-xs p-2 md:text-center">
+                <div className="max-w-xs p-2 md:text-center mx-auto">
                     <BsFillRocketFill className="mb-6 md:mx-auto text-7xl text-purple" />
                     <h1 className="mb-1 lg:mb-3 text-2xl">Mission</h1>
                     <p className="opacity-80 font-light">
@@ -14,7 +14,7 @@ export default function KeyPoints() {
                         explore, learn, and grow.
                     </p>
                 </div>
-                <div className="max-w-xs p-2 md:text-center">
+                <div className="max-w-xs p-2 md:text-center mx-auto">
                     <AiOutlineSafety className="mb-6 md:mx-auto text-7xl text-green-400" />
                     <h1 className="mb-1 lg:mb-3 text-2xl">Safety</h1>
                     <p className="opacity-80 font-light">
@@ -22,7 +22,7 @@ export default function KeyPoints() {
                         our staff undergoes regular safety training.
                     </p>
                 </div>
-                <div className="max-w-xs p-2 md:text-center">
+                <div className="max-w-xs p-2 md:text-center mx-auto">
                     <MdFamilyRestroom className="mb-6 md:mx-auto text-7xl text-orange" />
                     <h1 className="mb-1 lg:mb-3 text-2xl">Parents</h1>
                     <p className="opacity-80 font-light">
