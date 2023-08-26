@@ -1,4 +1,5 @@
-// Depends on my-container custom style in global.css file
+// Dependencies: react-icons
+// npm install react-icons
 import Link from "next/link"
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa"
 
@@ -43,7 +44,7 @@ export default function Footer() {
 
     return (
         <footer className="sticky mt-auto text-white bg-secondary top-full">
-            <div className="flex flex-col items-center justify-center my-container h-52 gap-y-4 md:flex-row md:justify-between">
+            <div className="flex flex-col items-center justify-center container mx-auto px-4 lg:px-8 h-52 gap-y-4 md:flex-row md:justify-between">
                 <div className="text-xl text-center font-semibold">
                     <span className="text-primary">CDC</span> Day Care
                 </div>
