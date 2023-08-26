@@ -1,7 +1,7 @@
-import Link from "next/link"
 import Image from "next/image"
 import heroBackground from "@/public/img/daycareHero.jpeg"
 import Button from "./shared/Button"
+import { Link as ScrollLink } from "react-scroll"
 
 export default function Hero() {
     return (
@@ -29,11 +29,11 @@ export default function Hero() {
                             Our child-friendly spaces are designed to encourage exploration while providing a
                             safe and secure environment for growth and development.
                         </p>
-                        <Link href="/gallery">
+                        <ScrollLink to="contact">
                             <Button size="large" className="lg:text-lg">
                                 Schedule free tour
                             </Button>
-                        </Link>
+                        </ScrollLink>
                     </div>
                 </div>
             </div>
