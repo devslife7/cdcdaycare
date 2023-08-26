@@ -3,7 +3,7 @@ import philosophyimg from "@/public/img/aboutusimg.jpg"
 
 export default function AboutUs() {
     return (
-        <div className="py-24">
+        <section id="about-us" className="py-24">
             <div className="my-container flex justify-evenly">
                 <Image src={philosophyimg} alt="Child doing homework" />
                 <div className="max-w-lg space-y-6">
@@ -19,6 +19,6 @@ export default function AboutUs() {
                     </p>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }

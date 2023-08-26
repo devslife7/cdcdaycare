@@ -5,7 +5,7 @@ import Button from "./shared/Button"
 
 export default function Hero() {
     return (
-        <div className="h-[70vh] lg:h-[60vh] relative">
+        <section id="hero" className="h-[70vh] lg:h-[60vh] relative">
             <div className="absolute w-full h-full -z-10">
                 <Image
                     src={heroBackground}
@@ -31,12 +31,12 @@ export default function Hero() {
                         </p>
                         <Link href="/gallery">
                             <Button size="large" className="lg:text-lg">
-                                Get started
+                                Schedule free tour
                             </Button>
                         </Link>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
