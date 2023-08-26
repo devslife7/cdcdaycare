@@ -55,7 +55,7 @@ export default function ContactForm() {
         "block w-full px-3 py-2 mt-1 text-sm bg-white border rounded-md shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)} className="max-w-sm w-full space-y-4">
+        <form onSubmit={handleSubmit(onSubmit)} className="max-w-sm w-full space-y-4 mx-auto">
             <h1 className="opacity-70 text-2xl mb-2">Schedule a free tour!</h1>
             <input
                 className={inputSyle}
@@ -92,9 +92,6 @@ export default function ContactForm() {
                 <Button type="submit">
                     {isLoading && <Spinner className="text-white mr-2" />}
                     Send Message
-                </Button>
-                <Button variant="cancel" className="mx-2" onClick={() => clearErrors()}>
-                    clear
                 </Button>
             </div>
         </form>
