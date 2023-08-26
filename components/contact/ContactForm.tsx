@@ -20,10 +20,10 @@ export default function ContactForm() {
         formState: { errors },
     } = useForm<FormValues>({
         defaultValues: {
-            name: "Nick",
-            email: "devslife7@gmail.com",
-            phone: "999 999 9999",
-            message: "Test email here...",
+            name: "",
+            email: "",
+            phone: "",
+            message: "",
         },
     })
 
