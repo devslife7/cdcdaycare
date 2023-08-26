@@ -33,3 +33,7 @@ html {
 .my-container {
     @apply container mx-auto px-3 lg:px-8;
 }
+
+/* .active span {
+    @apply text-primary block absolute left-2 top-1 font-bold;
+} */

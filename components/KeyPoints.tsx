@@ -4,7 +4,7 @@ import { AiOutlineSafety } from "react-icons/ai"
 
 export default function KeyPoints() {
     return (
-        <div className="my-container">
+        <section className="my-container">
             <div className="flex flex-wrap justify-start gap-12 my-20 md:gap-0 lg:justify-evenly">
                 <div className="max-w-xs p-2 md:text-center">
                     <BsFillRocketFill className="mb-6 md:mx-auto text-7xl text-purple" />
@@ -31,6 +31,6 @@ export default function KeyPoints() {
                     </p>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }

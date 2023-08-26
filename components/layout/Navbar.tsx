@@ -53,26 +53,22 @@ export default function Navbar() {
     }
 
     const renderNavLinks = () => {
-        const isActive = (href: string) => (navActive === href ? "text-primary" : "hover:text-gray-400")
         return navLinks.map((link, index) => (
-            // <Link
-            //     key={index}
-            //     href={link.href}
-            //     className={`px-2 leading-7 transition-all relative ${isActive(link.href)}`}
-            //     onClick={() => setNavAtive(link.href)}
-            // >
-            //     {link.label}
-            //     {navActive === link.href && <span className="absolute left-2 top-1 font-bold">___</span>}
-            // </Link>
-            <ScrollLink to={link.href} className="">
+            <ScrollLink
+                key={index}
+                to={link.href}
+                className="px-2 leading-7 transition-all relative cursor-pointer [&>span]:[&.active]:text-primary [&>span]:[&.active]:block [&>span]:[&.active]:absolute [&>span]:[&.active]:font-bold [&>span]:[&.active]:top-1 [&.active]:text-primary"
+                spy={true}
+                offset={-63}
+            >
                 {link.label}
+                <span className="hidden">___</span>
             </ScrollLink>
         ))
     }
 
     return (
         <nav>
-            {/* <div className={classNames({ "h-20": isHome() })}></div> */}
             <header
                 className={classNames(
                     "fixed top-0 z-10 w-full text-white transition-all duration-300 ease-in-out",
@@ -102,13 +98,13 @@ export default function Navbar() {
                         </button>
                     </div>
                 </nav>
-                {/* {mobileMenuOpen && (
-          <MobileNav
-            mobileMenuOpen={mobileMenuOpen}
-            setMobileMenuOpen={setMobileMenuOpen}
-            navLinks={navLinks}
-          />
-        )} */}
+                {mobileMenuOpen && (
+                    <MobileNav
+                        mobileMenuOpen={mobileMenuOpen}
+                        setMobileMenuOpen={setMobileMenuOpen}
+                        navLinks={navLinks}
+                    />
+                )}
             </header>
         </nav>
     )
