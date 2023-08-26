@@ -2,6 +2,7 @@ import { useForm, SubmitHandler } from "react-hook-form"
 import Button from "../shared/Button"
 import emailjs from "@emailjs/browser"
 import React, { useState } from "react"
+import Spinner from "@/public/svg/Spinner"
 
 type FormValues = {
     name: string
@@ -88,7 +89,10 @@ export default function ContactForm() {
             {errors.message && <span className="text-red-400"> &nbsp;{errors.message.message}</span>}
 
             <div>
-                <Button type="submit">{isLoading ? "Loading..." : "Send Message"}</Button>
+                <Button type="submit">
+                    {isLoading && <Spinner className="text-white mr-2" />}
+                    Send Message
+                </Button>
                 <Button variant="cancel" className="mx-2" onClick={() => clearErrors()}>
                     clear
                 </Button>
