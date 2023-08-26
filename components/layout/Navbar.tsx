@@ -3,7 +3,6 @@ import { useEffect, useState } from "react"
 import { Bars3Icon } from "@heroicons/react/24/outline"
 import MobileNav from "./MobileNav"
 import classNames from "classnames"
-import { animateScroll as scroll } from "react-scroll"
 import { Link as ScrollLink } from "react-scroll"
 
 interface NavLink {
@@ -34,7 +33,6 @@ export default function Navbar() {
     console.log("render navbar here")
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     const [scrollNav, setScrollNav] = useState(false)
-    const [navActive, setNavAtive] = useState("#hero")
 
     useEffect(() => {
         window.addEventListener("scroll", changeNav)
