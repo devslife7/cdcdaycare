@@ -1,5 +1,5 @@
 import Image from "next/image"
-import aboutUsSection from "@/public/images/aboutUsSection.jpg"
+import aboutUsSection from "../public/images/aboutUsSection.jpg"
 
 export default function AboutUs() {
     return (
