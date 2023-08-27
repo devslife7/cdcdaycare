@@ -89,7 +89,7 @@ export default function ContactForm() {
 
             <div>
                 <Button type="submit">
-                    {true && <Spinner className="text-white mr-2" />}
+                    {isLoading && <Spinner className="mr-2" />}
                     Send Message
                 </Button>
             </div>
