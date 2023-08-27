@@ -2,7 +2,7 @@ import { useForm, SubmitHandler } from "react-hook-form"
 import Button from "../shared/Button"
 import emailjs from "@emailjs/browser"
 import React, { useState } from "react"
-import Spinner from "@/public/svg/Spinner"
+import Spinner from "@/public/icons/Spinner"
 
 type FormValues = {
     name: string

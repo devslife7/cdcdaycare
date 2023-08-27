@@ -9,12 +9,12 @@ export default function Hero() {
         <section id="hero" className="h-[70vh] lg:h-[60vh] relative">
             <div className="absolute w-full h-full -z-10">
                 <Image
-                    src="https://images.pexels.com/photos/259915/pexels-photo-259915.jpeg"
+                    src={heroBackground}
                     className="object-cover w-full h-full"
-                    // placeholder="blur"
+                    placeholder="blur"
                     priority
-                    width={1200}
-                    height={1200}
+                    // width={1200}
+                    // height={1200}
                     alt="Day Care Children"
                 />
             </div>
