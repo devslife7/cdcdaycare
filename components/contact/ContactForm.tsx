@@ -13,7 +13,6 @@ type FormValues = {
 
 export default function ContactForm() {
     const {
-        clearErrors,
         register,
         handleSubmit,
         formState: { errors },
