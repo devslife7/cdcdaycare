@@ -1,5 +1,5 @@
 import Image from "next/image"
-import philoSection from "@/public/images/philoSection.jpg"
+import philoSection from "@/public/images/philosophy-section.jpg"
 
 export default function Philosophy() {
     return (
