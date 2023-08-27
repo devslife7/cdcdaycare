@@ -2,9 +2,10 @@ import { useForm, SubmitHandler } from "react-hook-form"
 import Button from "../shared/Button"
 import emailjs from "@emailjs/browser"
 import React, { useState } from "react"
-import Spinner from "@/public/icons/Spinner"
+// import Spinner from "@/public/icons/Spinner"
 import { FaPhoneAlt } from "react-icons/fa"
 import { IoMdMail } from "react-icons/io"
+import { CgSpinnerAlt } from "react-icons/cg"
 
 type FormValues = {
     name: string
@@ -55,9 +56,9 @@ export default function ContactForm() {
         "block w-full px-3 py-2 text-sm bg-backgroundGray border rounded-md shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)} className="max-w-sm space-y-4 mx-auto">
-            <div className="space-y-6 mb-9 text-lg">
-                <div className="flex justify-between items-center">
+        <form onSubmit={handleSubmit(onSubmit)} className="max-w-sm mx-auto space-y-4">
+            <div className="space-y-6 text-lg mb-9">
+                <div className="flex items-center justify-between">
                     <div>
                         <FaPhoneAlt className="inline-block mr-2 text-green mb-1 text-[1.6rem]" />
                         <span className="opacity-80">(999)999-9999</span>
@@ -70,11 +71,11 @@ export default function ContactForm() {
                     </a>
                 </div>
                 <div>
-                    <IoMdMail className="inline-block mr-2 text-primary text-3xl" />
+                    <IoMdMail className="inline-block mr-2 text-3xl text-primary" />
                     <span className="opacity-80">email@email.com</span>
                 </div>
             </div>
-            <h1 className="opacity-70 text-4xl text-secondary font-extrabold mb-2">Schedule a free tour!</h1>
+            <h1 className="mb-2 text-4xl font-extrabold opacity-70 text-secondary">Schedule a free tour!</h1>
             <input
                 className={inputSyle}
                 placeholder="Name*"
@@ -108,7 +109,8 @@ export default function ContactForm() {
 
             <div>
                 <Button type="submit">
-                    {isLoading && <Spinner className="mr-2" />}
+                    {/* {true && <Spinner className="mr-2" />} */}
+                    <CgSpinnerAlt className="mr-2 text-xl animate-spin" />
                     Send Message
                 </Button>
             </div>
