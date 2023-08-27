@@ -11,6 +11,7 @@ const config: Config = {
             colors: {
                 primary: "#029AFF",
                 secondary: "#012740",
+                backgroundGray: "#f5f5f5",
                 purple: {
                     DEFAULT: "#D164F5",
                 },
