@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image"
 // import heroBackground from "@/public/img/daycareHero.jpeg"
-import heroBackground from "@/public/images/daycareHero.jpeg"
+import heroBackground from "@/public/images/daycarehero.webp"
 import { Link as ScrollLink } from "react-scroll"
 import Button from "./shared/Button"
 
