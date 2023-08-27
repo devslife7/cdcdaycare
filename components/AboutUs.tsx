@@ -1,5 +1,5 @@
 import Image from "next/image"
-import philosophyimg from "@/public/images/aboutUsImg.jpg"
+import philosophyimg from "@public/images/aboutUsImg.jpg"
 
 export default function AboutUs() {
     return (
