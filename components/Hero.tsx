@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image"
-import heroBackground from "../public/images/daycarehero.webp"
+import heroBackground from "@/public/images/daycarehero.webp"
 import { Link as ScrollLink } from "react-scroll"
 import Button from "./shared/Button"
 
@@ -13,8 +13,7 @@ export default function Hero() {
                     className="object-cover w-full h-full"
                     placeholder="blur"
                     priority
-                    // width={1200}
-                    // height={1200}
+                    unoptimized
                     alt="Day Care Children"
                 />
             </div>
