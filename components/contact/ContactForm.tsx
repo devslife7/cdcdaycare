@@ -56,7 +56,7 @@ export default function ContactForm() {
 
     return (
         <form onSubmit={handleSubmit(onSubmit)} className="max-w-sm space-y-4 mx-auto">
-            <div className="space-y-6 mb-9 text-xl">
+            <div className="space-y-6 mb-9 text-lg">
                 <div className="flex justify-between items-center">
                     <div>
                         <FaPhoneAlt className="inline-block mr-2 text-green mb-1 text-[1.6rem]" />
@@ -64,8 +64,7 @@ export default function ContactForm() {
                     </div>
                     <a
                         href="tel:999-999-9999"
-                        className="bg-green text-white border-[3px] border-solid border-transparent inline-block rounded-md px-4 py-1 text-base
-              hover:border-solid hover:bg-transparent hover:border-[3px] hover:border-green hover:text-green transition-all ease-in-out duration-300 "
+                        className="bg-green text-white border-[3px] border-solid border-transparent inline-block rounded-md px-4 py-1 text-base hover:border-solid hover:bg-transparent hover:border-[3px] hover:border-green hover:text-green transition-all ease-in-out duration-300 "
                     >
                         Call now
                     </a>

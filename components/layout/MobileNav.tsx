@@ -40,7 +40,7 @@ export default function MobileNav({ mobileMenuOpen, setMobileMenuOpen, navLinks 
                                     className="-mx-2 block rounded-lg px-3 py-4 font-medium leading-7 text- [&.active]:text-primary"
                                     onClick={closeMobileMenu}
                                     spy={true}
-                                    offset={-63}
+                                    offset={40}
                                 >
                                     {link.label}
                                 </ScrollLink>
