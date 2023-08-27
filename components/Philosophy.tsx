@@ -1,5 +1,5 @@
 import Image from "next/image"
-import philoSection from "../public/images/philoSection.jpg"
+import philoSection from "@/public/images/philoSection.jpg"
 
 export default function Philosophy() {
     return (
@@ -16,7 +16,7 @@ export default function Philosophy() {
                         fun-filled programs that engage the whole child's developing mind and body.
                     </p>
                 </div>
-                <Image className="mx-auto" src={philoSection} alt="Child doing homework" />
+                <Image className="mx-auto" src={philoSection} unoptimized alt="Child doing homework" />
             </div>
         </section>
     )

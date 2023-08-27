@@ -1,5 +1,5 @@
 import Image from "next/image"
-import aboutUsSection from "../public/images/aboutUsSection.jpg"
+import aboutUsSection from "@/public/images/aboutUsSection.jpg"
 
 export default function AboutUs() {
     return (
@@ -17,7 +17,7 @@ export default function AboutUs() {
                         of growth and discovery.
                     </p>
                 </div>
-                <Image className="mx-auto" src={aboutUsSection} alt="Child doing homework" />
+                <Image className="mx-auto" src={aboutUsSection} unoptimized alt="Child doing homework" />
             </div>
         </section>
     )
