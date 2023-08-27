@@ -55,12 +55,15 @@ export default function Navbar() {
             <ScrollLink
                 key={index}
                 to={link.href}
-                className="px-2 leading-7 transition-all relative cursor-pointer [&>span]:[&.active]:text-primary [&>span]:[&.active]:block [&>span]:[&.active]:absolute [&>span]:[&.active]:font-bold [&>span]:[&.active]:top-1 [&.active]:text-primary"
+                className="px-2 leading-7 transition-colors ease-in duration-200 relative cursor-pointer [&.active]:text-primary overflow-hidden
+                [&>span]:[&.active]:inline-block [&>span]:[&.active]:translate-x-8"
                 spy={true}
                 offset={-63}
             >
                 {link.label}
-                <span className="hidden">___</span>
+                <span className="absolute font-bold transition-transform duration-200 ease-in -left-6 text-primary top-1">
+                    ___
+                </span>
             </ScrollLink>
         ))
     }
