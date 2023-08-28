@@ -1,6 +1,7 @@
 import Image from "next/image"
 import heroBackground from "@/public/images/daycare-hero.webp"
 import HeroButton from "./HeroButton"
+import Translator from "../shared/Translator"
 
 export default function Hero() {
     return (
@@ -26,10 +27,8 @@ export default function Hero() {
                             </span>
                         </h1>
                         <p className="max-w-lg mt-5 mb-10 font-light text-md lg:leading-relaxed">
-                            Our child-friendly spaces are designed to encourage exploration while providing a
-                            safe and secure environment for growth and development.
+                            <Translator content="heroSubtext" />
                         </p>
-
                         <HeroButton />
                     </div>
                 </div>

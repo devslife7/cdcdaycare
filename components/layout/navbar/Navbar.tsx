@@ -7,31 +7,7 @@ import { Link as ScrollLink } from "react-scroll"
 import { useStore } from "@/state/store"
 import Button from "@/components/shared/Button"
 import Image from "next/image"
-import { translator } from "@/data/translator"
-
-interface NavLink {
-    label: string
-    href: string
-}
-
-// const navLinks = [
-//     {
-//         label: "Home",
-//         href: "hero",
-//     },
-//     {
-//         label: "Philosophy",
-//         href: "philosophy",
-//     },
-//     {
-//         label: "About Us",
-//         href: "about-us",
-//     },
-//     {
-//         label: "Contact",
-//         href: "contact",
-//     },
-// ]
+import translator from "@/data/translator.json"
 
 export default function Navbar() {
     console.log("render navbar here")
@@ -98,24 +74,29 @@ export default function Navbar() {
                     <div className="hidden lg:flex lg:gap-x-7">
                         {renderNavLinks()}
                         <Button onClick={handleLangChage} size="small" className="bg-blue-900">
-                            {currentLang === "eng" ? (
-                                <Image
-                                    src="https://media-1.api-sports.io/football/teams/2384.png"
-                                    width={25}
-                                    height={15}
-                                    alt="spain flag"
-                                    className="mr-1"
-                                />
+                            {currentLang !== "eng" ? (
+                                <>
+                                    <Image
+                                        src="https://media-1.api-sports.io/football/teams/2384.png"
+                                        width={25}
+                                        height={15}
+                                        alt="spain flag"
+                                        className="mr-1"
+                                    />
+                                    {"ENG"}
+                                </>
                             ) : (
-                                <Image
-                                    src="https://media-1.api-sports.io/football/teams/9.png"
-                                    width={25}
-                                    height={15}
-                                    alt="spain flag"
-                                    className="mr-1"
-                                />
+                                <>
+                                    <Image
+                                        src="https://media-1.api-sports.io/football/teams/9.png"
+                                        width={25}
+                                        height={15}
+                                        alt="spain flag"
+                                        className="mr-1"
+                                    />
+                                    {"ESP"}
+                                </>
                             )}
-                            {currentLang.toUpperCase()}
                         </Button>
                     </div>
                     <div className="flex lg:hidden">

@@ -1,0 +1,44 @@
+{
+    "navLinks": {
+        "eng": [
+            {
+                "label": "Home",
+                "href": "hero"
+            },
+            {
+                "label": "Philosophy",
+                "href": "philosophy"
+            },
+            {
+                "label": "About Us",
+                "href": "about-us"
+            },
+            {
+                "label": "Contact",
+                "href": "contact"
+            }
+        ],
+        "esp": [
+            {
+                "label": "Casa",
+                "href": "hero"
+            },
+            {
+                "label": "Filosofía",
+                "href": "philosophy"
+            },
+            {
+                "label": "Acerca",
+                "href": "about-us"
+            },
+            {
+                "label": "Contacto",
+                "href": "contact"
+            }
+        ]
+    },
+    "heroSubtext": {
+        "eng": "Our child-friendly spaces are designed to encourage exploration while providing a safe and secure environment for growth and development.",
+        "esp": "Nuestros espacios aptos para niños están diseñados para fomentar la exploración y al mismo tiempo proporcionar un entorno seguro para el crecimiento y el desarrollo."
+    }
+}

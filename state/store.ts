@@ -14,8 +14,5 @@ export const useStore = create<StoreType>(set => ({
     price: 0,
     carTotals: 0,
     lang: getUserLanguage(),
-    changeLang: (lang: "eng" | "esp") => {
-        localStorage.setItem("lang", lang)
-        set({ lang })
-    },
+    changeLang: (lang: "eng" | "esp") => set({ lang }),
 }))
