@@ -11,24 +11,37 @@ import Button from "../shared/Button"
 type FormTypes = {
     name: string
     email: string
-    phone: string
+    phone?: string
     message: string
 }
 
 const schema: ZodType<FormTypes> = z.object({
-    name: z.string().max(20).nonempty().min(2),
+    name: z
+        .string()
+        .nonempty({ message: "Name is required" })
+        .min(3, { message: "Name must contain at least 3 character(s)" })
+        .max(20),
     email: z.string().email(),
     phone: z.string(),
-    message: z.string().max(50).nonempty({ message: "This field is required" }),
+    message: z.string().max(50).nonempty({ message: "Message is required" }),
 })
+
+const defaultValues = {
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+}
 
 export default function ContactForm() {
     const {
         register,
+        reset,
         handleSubmit,
         formState: { errors },
     } = useForm<FormTypes>({
         resolver: zodResolver(schema),
+        defaultValues: defaultValues,
     })
 
     const [isLoading, setIsLoading] = useState(false)
@@ -43,11 +56,11 @@ export default function ContactForm() {
             <textarea name="from_message">${data.message}</textarea>
         
         `
-        console.log("formData:", formData)
         emailjs.sendForm("service_b27ezi3", "template_c4rqhh1", formData, "hpeVPBIjR0dTtIqex").then(
             result => {
                 console.log(result.text)
                 setIsLoading(false)
+                reset(defaultValues)
             },
             error => {
                 console.log(error.text)
