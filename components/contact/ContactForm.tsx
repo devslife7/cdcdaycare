@@ -16,7 +16,7 @@ type FormTypes = {
 }
 
 const schema: ZodType<FormTypes> = z.object({
-    name: z.string().max(20).nonempty({ message: "This field is required" }).min(2),
+    name: z.string().max(20).nonempty().min(2),
     email: z.string().email(),
     phone: z.string().min(10).max(15),
     message: z.string().max(50).nonempty({ message: "This field is required" }),
@@ -29,12 +29,12 @@ export default function ContactForm() {
         formState: { errors },
     } = useForm<FormTypes>({
         resolver: zodResolver(schema),
-        defaultValues: {
-            name: "",
-            email: "",
-            phone: "",
-            message: "",
-        },
+        // defaultValues: {
+        //     name: "james",
+        //     email: "",
+        //     phone: "",
+        //     message: "",
+        // },
     })
 
     const [isLoading, setIsLoading] = useState(false)
@@ -86,19 +86,16 @@ export default function ContactForm() {
             </div>
             <h1 className="mb-2 text-4xl font-extrabold opacity-70 text-secondary">Schedule a free tour!</h1>
             <input className={inputSyle} placeholder="Name*" {...register("name")} />
-            {errors.name && <span className="text-red-400"> &nbsp;{errors.name.message}</span>}
+            <span className="text-red-400">{errors.name?.message}</span>
             <input className={inputSyle} placeholder="Email*" {...register("email")} />
-            {errors.email && <span className="text-red-400"> &nbsp;{errors.email.message}</span>}
+            <span className="text-red-400">{errors.email?.message}</span>
             <input className={inputSyle} placeholder="Phone (optional)" {...register("phone")} />
             <textarea className={inputSyle} placeholder="Message*" rows={5} {...register("message")} />
-            {errors.message && <span className="text-red-400"> &nbsp;{errors.message.message}</span>}
-
-            <div>
-                <Button type="submit">
-                    <CgSpinnerAlt className="mr-2 text-xl animate-spin" />
-                    Send Message
-                </Button>
-            </div>
+            <span className="text-red-400">{errors.message?.message}</span>
+            <Button type="submit">
+                <CgSpinnerAlt className="mr-2 text-xl animate-spin" />
+                Send Message
+            </Button>
         </form>
     )
 }
