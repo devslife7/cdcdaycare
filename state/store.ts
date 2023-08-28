@@ -8,11 +8,10 @@ type StoreType = {
     lang: "eng" | "esp"
     changeLang: (arg: "eng" | "esp") => void
 }
-const getUserLanguage = () => (localStorage.getItem("lang") === "eng" || null ? "eng" : "esp")
 export const useStore = create<StoreType>(set => ({
     name: "",
     price: 0,
     carTotals: 0,
-    lang: getUserLanguage(),
+    lang: "eng",
     changeLang: (lang: "eng" | "esp") => set({ lang }),
 }))

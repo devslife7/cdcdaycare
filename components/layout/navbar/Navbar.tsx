@@ -8,6 +8,7 @@ import { useStore } from "@/state/store"
 import Button from "@/components/shared/Button"
 import Image from "next/image"
 import translator from "@/data/translator.json"
+import { useRouter } from "next/router"
 
 export default function Navbar() {
     console.log("render navbar here")
@@ -15,6 +16,7 @@ export default function Navbar() {
     const [scrollNav, setScrollNav] = useState(false)
     const { changeLang } = useStore()
     const currentLang = useStore.getState().lang
+    const router = useRouter()
 
     useEffect(() => {
         window.addEventListener("scroll", changeNav)
@@ -50,7 +52,16 @@ export default function Navbar() {
         ))
     }
 
-    const handleLangChage = () => (currentLang === "eng" ? changeLang("esp") : changeLang("eng"))
+    const handleLangChage = () => {
+        if (currentLang === "eng") {
+            changeLang("esp")
+            router.push("/?counter=10", undefined, { shallow: true })
+        } else {
+            changeLang("eng")
+        }
+    }
+
+    // router.push('/?counter=10', undefined, { shallow: true })
 
     return (
         <nav>
