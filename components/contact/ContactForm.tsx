@@ -8,6 +8,7 @@ import { useForm, SubmitHandler } from "react-hook-form"
 import { ZodType, z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
 import Button from "../shared/Button"
+import Translator from "../shared/Translator"
 
 type FormTypes = {
     name: string
@@ -77,22 +78,24 @@ export default function ContactForm() {
             <div className="space-y-6 text-lg mb-9">
                 <div className="flex items-center justify-between">
                     <div>
-                        <FaPhoneAlt className="inline-block mr-2 text-green mb-1 text-[1.6rem]" />
+                        <FaPhoneAlt className="inline-block mr-2 text-green-500 mb-1 text-[1.6rem]" />
                         <span className="opacity-80">(999)999-9999</span>
                     </div>
                     <a
                         href="tel:999-999-9999"
-                        className="bg-green text-white border-[3px] border-solid border-transparent inline-block rounded-md px-4 py-1 text-base hover:border-solid hover:bg-transparent hover:border-[3px] hover:border-green hover:text-green transition-all ease-in-out duration-300 "
+                        className="bg-primary text-white border-[3px] border-solid border-transparent inline-block rounded-md px-4 py-1 text-base hover:border-solid hover:bg-transparent hover:border-[3px] hover:border-green hover:text-primary transition-all ease-in-out duration-300 "
                     >
-                        Call now
+                        <Translator content="ContactUsCallNowButton" />
                     </a>
                 </div>
                 <div>
-                    <IoMdMail className="inline-block mr-2 text-3xl text-primary" />
+                    <IoMdMail className="inline-block mr-2 text-3xl text-purple" />
                     <span className="opacity-80">email@email.com</span>
                 </div>
             </div>
-            <h1 className="mb-2 text-4xl font-extrabold opacity-70 text-secondary">Schedule a free tour!</h1>
+            <h1 className="mb-2 text-4xl font-extrabold opacity-70 text-secondary">
+                <Translator content="ContactUsFormTitle" />
+            </h1>
             <input className={inputSyle} placeholder="Name*" {...register("name")} />
             <span className="text-red-400 text-sm">{errors.name?.message}</span>
             <input className={inputSyle} placeholder="Email*" {...register("email")} />
@@ -102,7 +105,7 @@ export default function ContactForm() {
             <span className="text-red-400 text-sm">{errors.message?.message}</span>
             <Button type="submit" disabled={isLoading}>
                 {isLoading && <CgSpinnerAlt className="mr-2 text-xl animate-spin" />}
-                Send Message
+                <Translator content="ContactUsFormButton" />
             </Button>
         </form>
     )

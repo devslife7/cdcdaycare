@@ -88,5 +88,33 @@
     "AboutUsSubtext": {
         "eng": "We believe that with love and care every child can learn. That is why we provide all the elements for a strong foundation of success. We take pride in creating a healthy environment with wholesome activities. We purposely fill our time with active, fun-filled programs that engage the whole child's developing mind and body.",
         "esp": "Creemos que con amor y cuidado cada niño puede aprender. Es por eso que proporcionamos todos los elementos para una base sólida de éxito. Estamos orgullosos de crear un ambiente saludable con actividades saludables. A propósito, llenamos nuestro tiempo con programas activos y divertidos que involucran el desarrollo integral de la mente y el cuerpo del niño."
+    },
+    "ContactUsTitle": {
+        "eng": "Contact Us",
+        "esp": "Contáctanos"
+    },
+    "ContactUsCallNowButton": {
+        "eng": "Call now",
+        "esp": "LLama ahora"
+    },
+    "ContactUsFormTitle": {
+        "eng": "Schedule a free tour!",
+        "esp": "¡Programe un recorrido gratuito!"
+    },
+    "ContactUsFormName": {
+        "eng": "Name",
+        "esp": "Nombre"
+    },
+    "ContactUsFormPhone": {
+        "eng": "Phone",
+        "esp": "Teléfono"
+    },
+    "ContactUsFormMessage": {
+        "eng": "Message",
+        "esp": "Mensaje"
+    },
+    "ContactUsFormButton": {
+        "eng": "Send Message",
+        "esp": "Enviar mensaje"
     }
 }
