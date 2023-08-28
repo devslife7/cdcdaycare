@@ -72,5 +72,21 @@
     "keySectionParentsSubtitle": {
         "eng": "Regular parent-teacher meetings, progress reports, and family events allow parents to actively participate in their child's learning journey.",
         "esp": "Las reuniones periódicas de padres y maestros, los informes de progreso y los eventos familiares permiten a los padres participar activamente en el viaje de aprendizaje de sus hijos."
+    },
+    "philosophyTitle": {
+        "eng": "PHILOSOPHY",
+        "esp": "FILOSOFÍA"
+    },
+    "philosophySubtext": {
+        "eng": "We believe that with love and care every child can learn. That is why we provide all the elements for a strong foundation of success. We take pride in creating a healthy environment with wholesome activities. We purposely fill our time with active, fun-filled programs that engage the whole child's developing mind and body.",
+        "esp": "Creemos que con amor y cuidado cada niño puede aprender. Es por eso que proporcionamos todos los elementos para una base sólida de éxito. Estamos orgullosos de crear un ambiente saludable con actividades saludables. A propósito, llenamos nuestro tiempo con programas activos y divertidos que involucran el desarrollo integral de la mente y el cuerpo del niño."
+    },
+    "AboutUsTitle": {
+        "eng": "ABOUT US",
+        "esp": "SOBRE NOSOTROS"
+    },
+    "AboutUsSubtext": {
+        "eng": "We believe that with love and care every child can learn. That is why we provide all the elements for a strong foundation of success. We take pride in creating a healthy environment with wholesome activities. We purposely fill our time with active, fun-filled programs that engage the whole child's developing mind and body.",
+        "esp": "Creemos que con amor y cuidado cada niño puede aprender. Es por eso que proporcionamos todos los elementos para una base sólida de éxito. Estamos orgullosos de crear un ambiente saludable con actividades saludables. A propósito, llenamos nuestro tiempo con programas activos y divertidos que involucran el desarrollo integral de la mente y el cuerpo del niño."
     }
 }
