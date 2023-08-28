@@ -93,12 +93,12 @@ export default function ContactForm() {
             </div>
             <h1 className="mb-2 text-4xl font-extrabold opacity-70 text-secondary">Schedule a free tour!</h1>
             <input className={inputSyle} placeholder="Name*" {...register("name")} />
-            <span className="text-red-400">{errors.name?.message}</span>
+            <span className="text-red-400 text-sm">{errors.name?.message}</span>
             <input className={inputSyle} placeholder="Email*" {...register("email")} />
-            <span className="text-red-400">{errors.email?.message}</span>
+            <span className="text-red-400 text-sm">{errors.email?.message}</span>
             <input className={inputSyle} placeholder="Phone (optional)" {...register("phone")} />
             <textarea className={inputSyle} placeholder="Message*" rows={5} {...register("message")} />
-            <span className="text-red-400">{errors.message?.message}</span>
+            <span className="text-red-400 text-sm">{errors.message?.message}</span>
             <Button type="submit" disabled={isLoading}>
                 {isLoading && <CgSpinnerAlt className="mr-2 text-xl animate-spin" />}
                 Send Message
