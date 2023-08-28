@@ -8,6 +8,7 @@ type Props = {
     onClick?: (e?: any) => void
     className?: string
     children: React.ReactNode
+    disabled?: boolean
     type?: "button" | "submit" | "reset"
 }
 
@@ -19,6 +20,7 @@ export default function Button({
     onClick,
     className,
     children,
+    disabled = false,
     type = "button",
     ...props
 }: Props) {
@@ -48,12 +50,13 @@ export default function Button({
     }
 
     const defaultStyle =
-        "flex items-center justify-center w-full lg:w-auto px-auto rounded-md transition-all font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 border border-transparent"
+        "flex items-center justify-center w-full lg:w-auto px-auto rounded-md transition-all font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 border border-transparent disabled:cursor-not-allowed disabled:opacity-60"
 
     return (
         <button
             {...props}
             type={type}
+            disabled={disabled}
             onClick={onClick}
             className={classNames(
                 className,

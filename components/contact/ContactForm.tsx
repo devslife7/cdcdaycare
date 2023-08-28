@@ -1,4 +1,3 @@
-import Button from "../shared/Button"
 import emailjs from "@emailjs/browser"
 import React, { useState } from "react"
 import { FaPhoneAlt } from "react-icons/fa"
@@ -7,6 +6,7 @@ import { CgSpinnerAlt } from "react-icons/cg"
 import { useForm, SubmitHandler } from "react-hook-form"
 import { ZodType, z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
+import Button from "../shared/Button"
 
 type FormTypes = {
     name: string
@@ -18,7 +18,7 @@ type FormTypes = {
 const schema: ZodType<FormTypes> = z.object({
     name: z.string().max(20).nonempty().min(2),
     email: z.string().email(),
-    phone: z.string().min(10).max(15),
+    phone: z.string(),
     message: z.string().max(50).nonempty({ message: "This field is required" }),
 })
 
@@ -29,12 +29,6 @@ export default function ContactForm() {
         formState: { errors },
     } = useForm<FormTypes>({
         resolver: zodResolver(schema),
-        // defaultValues: {
-        //     name: "james",
-        //     email: "",
-        //     phone: "",
-        //     message: "",
-        // },
     })
 
     const [isLoading, setIsLoading] = useState(false)
@@ -92,8 +86,8 @@ export default function ContactForm() {
             <input className={inputSyle} placeholder="Phone (optional)" {...register("phone")} />
             <textarea className={inputSyle} placeholder="Message*" rows={5} {...register("message")} />
             <span className="text-red-400">{errors.message?.message}</span>
-            <Button type="submit">
-                <CgSpinnerAlt className="mr-2 text-xl animate-spin" />
+            <Button type="submit" disabled={isLoading}>
+                {isLoading && <CgSpinnerAlt className="mr-2 text-xl animate-spin" />}
                 Send Message
             </Button>
         </form>
