@@ -1,7 +1,7 @@
 "use client"
 import { useEffect, useState } from "react"
 import { Bars3Icon } from "@heroicons/react/24/outline"
-import MobileNav from "./MobileNav"
+import Nav from "./Nav"
 import classNames from "classnames"
 import { Link as ScrollLink } from "react-scroll"
 
@@ -97,10 +97,15 @@ export default function Navbar() {
                             <span className="sr-only">Open main menu</span>
                             <Bars3Icon className="w-6 h-6 text-white" aria-hidden="true" />
                         </button>
+                        <Nav
+                            mobileMenuOpen={mobileMenuOpen}
+                            setMobileMenuOpen={setMobileMenuOpen}
+                            navLinks={navLinks}
+                        />
                     </div>
                 </nav>
                 {mobileMenuOpen && (
-                    <MobileNav
+                    <Nav
                         mobileMenuOpen={mobileMenuOpen}
                         setMobileMenuOpen={setMobileMenuOpen}
                         navLinks={navLinks}

@@ -1,8 +1,6 @@
-"use client"
 import Image from "next/image"
 import heroBackground from "@/public/images/daycare-hero.webp"
-import { Link as ScrollLink } from "react-scroll"
-import Button from "./shared/Button"
+import HeroButton from "./HeroButton"
 
 export default function Hero() {
     return (
@@ -32,14 +30,7 @@ export default function Hero() {
                             safe and secure environment for growth and development.
                         </p>
 
-                        <ScrollLink
-                            className="inline-flex items-center rounded-md transition-all font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 border border-transparent"
-                            to="contact"
-                        >
-                            <Button size="large" className="lg:text-lg">
-                                Schedule free tour
-                            </Button>
-                        </ScrollLink>
+                        <HeroButton />
                     </div>
                 </div>
             </div>

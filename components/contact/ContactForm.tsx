@@ -1,3 +1,4 @@
+"use client"
 import emailjs from "@emailjs/browser"
 import React, { useState } from "react"
 import { FaPhoneAlt } from "react-icons/fa"
