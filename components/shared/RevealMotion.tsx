@@ -10,7 +10,7 @@ import classNames from "classnames"
 import { motion, useAnimation, useInView } from "framer-motion"
 
 type Props = {
-    children: string | JSX.Element | JSX.Element[]
+    children: React.ReactNode
     className?: string
 }
 

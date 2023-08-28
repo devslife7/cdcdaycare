@@ -1,3 +1,8 @@
+/*
+    Install dependencies:
+        npm install classnames
+*/
+
 import classNames from "classnames"
 
 type Props = {
@@ -13,8 +18,6 @@ type Props = {
 }
 
 export default function Button({
-    startIcon,
-    endIcon,
     variant = "primary",
     size = "medium",
     onClick,
@@ -65,9 +68,7 @@ export default function Button({
                 sizeStyle[size as keyof SizeType]
             )}
         >
-            {startIcon ? <div className="mr-2">{startIcon}</div> : null}
             {children}
-            {endIcon ? <div className="ml-2">{endIcon}</div> : null}
         </button>
     )
 }
