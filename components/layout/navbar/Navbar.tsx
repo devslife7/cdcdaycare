@@ -16,7 +16,7 @@ export default function Navbar() {
     const [scrollNav, setScrollNav] = useState(false)
     const { changeLang } = useStore()
     const currentLang = useStore.getState().lang
-    const router = useRouter()
+    // const router = useRouter()
 
     useEffect(() => {
         window.addEventListener("scroll", changeNav)
@@ -55,7 +55,7 @@ export default function Navbar() {
     const handleLangChage = () => {
         if (currentLang === "eng") {
             changeLang("esp")
-            router.push("/?counter=10", undefined, { shallow: true })
+            // router.push("/?counter=10", undefined, { shallow: true })
         } else {
             changeLang("eng")
         }
