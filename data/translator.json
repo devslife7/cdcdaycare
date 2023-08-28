@@ -48,5 +48,29 @@
     "heroButton": {
         "eng": "Schedule free tour",
         "esp": "Programar visita gratuita"
+    },
+    "keySectionMissionTitle": {
+        "eng": "Mission",
+        "esp": "Misión"
+    },
+    "keySectionMissionSubtitle": {
+        "eng": "Our mission is to create a nurturing and stimulating environment where children can explore, learn, and grow.",
+        "esp": "Nuestra misión es crear un entorno enriquecedor y estimulante donde los niños puedan explorar, aprender y crecer."
+    },
+    "keySectionSafetyTitle": {
+        "eng": "Safety",
+        "esp": "Seguridad"
+    },
+    "keySectionSafetySubtitle": {
+        "eng": "Safety is our top priority. Our daycare is equipped with a secure entry system, and our staff undergoes regular safety training.",
+        "esp": "La seguridad es nuestra principal prioridad. Nuestra guardería está equipada con un sistema de entrada seguro y nuestro personal recibe capacitación periódica en seguridad."
+    },
+    "keySectionParentsTitle": {
+        "eng": "Parents",
+        "esp": "Padres"
+    },
+    "keySectionParentsSubtitle": {
+        "eng": "Regular parent-teacher meetings, progress reports, and family events allow parents to actively participate in their child's learning journey.",
+        "esp": "Las reuniones periódicas de padres y maestros, los informes de progreso y los eventos familiares permiten a los padres participar activamente en el viaje de aprendizaje de sus hijos."
     }
 }
