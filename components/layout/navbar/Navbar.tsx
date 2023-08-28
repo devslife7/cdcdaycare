@@ -4,35 +4,41 @@ import { Bars3Icon } from "@heroicons/react/24/outline"
 import MobileNav from "./MobileNav"
 import classNames from "classnames"
 import { Link as ScrollLink } from "react-scroll"
+import { useStore } from "@/state/store"
+import Button from "@/components/shared/Button"
+import Image from "next/image"
+import { translator } from "@/data/translator"
 
 interface NavLink {
     label: string
     href: string
 }
 
-const navLinks: NavLink[] = [
-    {
-        label: "Home",
-        href: "hero",
-    },
-    {
-        label: "Philosophy",
-        href: "philosophy",
-    },
-    {
-        label: "About Us",
-        href: "about-us",
-    },
-    {
-        label: "Contact",
-        href: "contact",
-    },
-]
+// const navLinks = [
+//     {
+//         label: "Home",
+//         href: "hero",
+//     },
+//     {
+//         label: "Philosophy",
+//         href: "philosophy",
+//     },
+//     {
+//         label: "About Us",
+//         href: "about-us",
+//     },
+//     {
+//         label: "Contact",
+//         href: "contact",
+//     },
+// ]
 
 export default function Navbar() {
     console.log("render navbar here")
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     const [scrollNav, setScrollNav] = useState(false)
+    const { changeLang } = useStore()
+    const currentLang = useStore.getState().lang
 
     useEffect(() => {
         window.addEventListener("scroll", changeNav)
@@ -51,7 +57,7 @@ export default function Navbar() {
     }
 
     const renderNavLinks = () => {
-        return navLinks.map((link, index) => (
+        return translator.navLinks[currentLang].map((link, index) => (
             <ScrollLink
                 key={index}
                 to={link.href}
@@ -67,6 +73,8 @@ export default function Navbar() {
             </ScrollLink>
         ))
     }
+
+    const handleLangChage = () => (currentLang === "eng" ? changeLang("esp") : changeLang("eng"))
 
     return (
         <nav>
@@ -87,7 +95,29 @@ export default function Navbar() {
                             </span>
                         </ScrollLink>
                     </div>
-                    <div className="hidden lg:flex lg:gap-x-7">{renderNavLinks()}</div>
+                    <div className="hidden lg:flex lg:gap-x-7">
+                        {renderNavLinks()}
+                        <Button onClick={handleLangChage} size="small" className="bg-blue-900">
+                            {currentLang === "eng" ? (
+                                <Image
+                                    src="https://media-1.api-sports.io/football/teams/2384.png"
+                                    width={25}
+                                    height={15}
+                                    alt="spain flag"
+                                    className="mr-1"
+                                />
+                            ) : (
+                                <Image
+                                    src="https://media-1.api-sports.io/football/teams/9.png"
+                                    width={25}
+                                    height={15}
+                                    alt="spain flag"
+                                    className="mr-1"
+                                />
+                            )}
+                            {currentLang.toUpperCase()}
+                        </Button>
+                    </div>
                     <div className="flex lg:hidden">
                         <button
                             type="button"
@@ -103,7 +133,7 @@ export default function Navbar() {
                     <MobileNav
                         mobileMenuOpen={mobileMenuOpen}
                         setMobileMenuOpen={setMobileMenuOpen}
-                        navLinks={navLinks}
+                        navLinks={translator.navLinks[currentLang]}
                     />
                 )}
             </header>

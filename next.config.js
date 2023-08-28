@@ -10,15 +10,7 @@ const nextConfig = {
             },
             {
                 protocol: "https",
-                hostname: "dsbgeneralconstruction-images-videos.s3.amazonaws.com",
-            },
-            {
-                protocol: "https",
-                hostname: "dsbgeneralconstruction-api-production.up.railway.app",
-            },
-            {
-                protocol: "https",
-                hostname: "images.pexels.com",
+                hostname: "media-1.api-sports.io",
             },
         ],
     },
