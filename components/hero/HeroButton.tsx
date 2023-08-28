@@ -1,6 +1,7 @@
 "use client"
 import { Link as ScrollLink } from "react-scroll"
 import Button from "../shared/Button"
+import Translator from "../shared/Translator"
 
 export default function HeroButton() {
     return (
@@ -10,7 +11,7 @@ export default function HeroButton() {
                 to="contact"
             >
                 <Button size="large" className="lg:text-lg">
-                    Schedule free tour
+                    <Translator content="heroButton" />
                 </Button>
             </ScrollLink>
         </div>

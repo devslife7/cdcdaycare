@@ -20,8 +20,7 @@ export default function Hero() {
                 <div className="flex items-center h-full text-white my-container">
                     <div className="max-w-4xl py-14 lg:py-20">
                         <h1 className="text-5xl font-extrabold lg:text-7xl relative">
-                            A Safe Haven for
-                            <br /> Growing Minds
+                            <Translator content="heroTitle" />
                             <span className="font-medium text-primary absolute left-1 -top-[3rem] lg:-top-[4.5rem]">
                                 ___
                             </span>

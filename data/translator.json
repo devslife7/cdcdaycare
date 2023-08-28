@@ -37,8 +37,16 @@
             }
         ]
     },
+    "heroTitle": {
+        "eng": "A Safe Haven for Growing Minds",
+        "esp": "Un refugio seguro para mentes en crecimiento"
+    },
     "heroSubtext": {
         "eng": "Our child-friendly spaces are designed to encourage exploration while providing a safe and secure environment for growth and development.",
         "esp": "Nuestros espacios aptos para niños están diseñados para fomentar la exploración y al mismo tiempo proporcionar un entorno seguro para el crecimiento y el desarrollo."
+    },
+    "heroButton": {
+        "eng": "Schedule free tour",
+        "esp": "Programar visita gratuita"
     }
 }
