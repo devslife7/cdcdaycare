@@ -48,7 +48,7 @@ export default function Button({
     }
 
     const defaultStyle =
-        "flex w-full lg:w-auto justify-center px-auto rounded-md transition-all font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 border border-transparent"
+        "flex items-center justify-center w-full lg:w-auto px-auto rounded-md transition-all font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 border border-transparent"
 
     return (
         <button

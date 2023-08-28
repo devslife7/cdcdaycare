@@ -1,25 +1,34 @@
-import { useForm, SubmitHandler } from "react-hook-form"
 import Button from "../shared/Button"
 import emailjs from "@emailjs/browser"
 import React, { useState } from "react"
-// import Spinner from "@/public/icons/Spinner"
 import { FaPhoneAlt } from "react-icons/fa"
 import { IoMdMail } from "react-icons/io"
 import { CgSpinnerAlt } from "react-icons/cg"
+import { useForm, SubmitHandler } from "react-hook-form"
+import { ZodType, z } from "zod"
+import { zodResolver } from "@hookform/resolvers/zod"
 
-type FormValues = {
+type FormTypes = {
     name: string
     email: string
     phone: string
     message: string
 }
 
+const schema: ZodType<FormTypes> = z.object({
+    name: z.string().max(20).nonempty({ message: "This field is required" }).min(2),
+    email: z.string().email(),
+    phone: z.string().min(10).max(15),
+    message: z.string().max(50).nonempty({ message: "This field is required" }),
+})
+
 export default function ContactForm() {
     const {
         register,
         handleSubmit,
         formState: { errors },
-    } = useForm<FormValues>({
+    } = useForm<FormTypes>({
+        resolver: zodResolver(schema),
         defaultValues: {
             name: "",
             email: "",
@@ -30,7 +39,7 @@ export default function ContactForm() {
 
     const [isLoading, setIsLoading] = useState(false)
 
-    const onSubmit: SubmitHandler<FormValues> = data => {
+    const onSubmit: SubmitHandler<FormTypes> = data => {
         setIsLoading(true)
         let formData = document.createElement("form")
         formData.innerHTML = ` 
@@ -76,40 +85,16 @@ export default function ContactForm() {
                 </div>
             </div>
             <h1 className="mb-2 text-4xl font-extrabold opacity-70 text-secondary">Schedule a free tour!</h1>
-            <input
-                className={inputSyle}
-                placeholder="Name*"
-                {...register("name", {
-                    required: "This is required *",
-                    minLength: { value: 3, message: "Min length is 3 *" },
-                })}
-            />
+            <input className={inputSyle} placeholder="Name*" {...register("name")} />
             {errors.name && <span className="text-red-400"> &nbsp;{errors.name.message}</span>}
-            <input
-                className={inputSyle}
-                placeholder="Email*"
-                type="email"
-                {...register("email", {
-                    required: "This is required *",
-                    minLength: { value: 3, message: "Min length is 3 *" },
-                })}
-            />
+            <input className={inputSyle} placeholder="Email*" {...register("email")} />
             {errors.email && <span className="text-red-400"> &nbsp;{errors.email.message}</span>}
             <input className={inputSyle} placeholder="Phone (optional)" {...register("phone")} />
-            <textarea
-                className={inputSyle}
-                placeholder="Message*"
-                rows={5}
-                {...register("message", {
-                    required: "This is required *",
-                    minLength: { value: 3, message: "Min length is 3 *" },
-                })}
-            />
+            <textarea className={inputSyle} placeholder="Message*" rows={5} {...register("message")} />
             {errors.message && <span className="text-red-400"> &nbsp;{errors.message.message}</span>}
 
             <div>
                 <Button type="submit">
-                    {/* {true && <Spinner className="mr-2" />} */}
                     <CgSpinnerAlt className="mr-2 text-xl animate-spin" />
                     Send Message
                 </Button>
