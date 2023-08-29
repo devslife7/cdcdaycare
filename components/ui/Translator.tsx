@@ -1,8 +1,8 @@
 "use client"
 import translator from "@/data/translator.json"
-import { useStore } from "@/state/store"
+import { useGlobalStore } from "@/state/store"
 
 export default function Translator({ content = "heroSubtext" }: { content: keyof typeof translator }) {
-    const { lang } = useStore()
+    const { lang } = useGlobalStore()
     return translator[content][lang].toString()
 }
