@@ -9,7 +9,19 @@ const config: Config = {
     theme: {
         extend: {
             colors: {
-                primary: "#029AFF",
+                primary: {
+                    DEFAULT: "#029AFF",
+                    50: "#E5F5FF",
+                    100: "#B8E2FF",
+                    200: "#8AD0FF",
+                    300: "#5DBEFF",
+                    400: "#2FACFF",
+                    500: "#029AFF",
+                    600: "#0081D6",
+                    700: "#0068AD",
+                    800: "#005085",
+                    900: "#00375C",
+                },
                 secondary: "#012740",
                 backgroundGray: "#f5f5f5",
                 purple: {

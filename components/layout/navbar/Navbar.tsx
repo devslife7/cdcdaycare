@@ -11,13 +11,10 @@ import translator from "@/data/translator.json"
 import { useRouter } from "next/router"
 
 export default function Navbar() {
-    console.log("renders navbar")
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     const [scrollNav, setScrollNav] = useState(false)
     const { changeLang } = useStore()
-    // const currentLang = useStore.getState().lang
     const { lang } = useStore()
-    // const router = useRouter()
 
     useEffect(() => {
         window.addEventListener("scroll", changeNav)
@@ -56,13 +53,10 @@ export default function Navbar() {
     const handleLangChage = () => {
         if (lang === "eng") {
             changeLang("esp")
-            // router.push("/?counter=10", undefined, { shallow: true })
         } else {
             changeLang("eng")
         }
     }
-
-    // router.push('/?counter=10', undefined, { shallow: true })
 
     return (
         <nav>
