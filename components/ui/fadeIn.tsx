@@ -14,7 +14,7 @@ type Props = {
     className?: string
 }
 
-export default function RevealMotion({ children, className }: Props) {
+export default function FadeIn({ children, className }: Props) {
     const ref = useRef(null)
     const isInView = useInView(ref, { once: true })
     const mainControls = useAnimation()

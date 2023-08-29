@@ -1,12 +1,12 @@
 import { MdFamilyRestroom } from "react-icons/md"
 import { BsFillRocketFill } from "react-icons/bs"
 import { AiOutlineSafety } from "react-icons/ai"
-import RevealMotion from "./ui/RevealMotion"
-import Translator from "./ui/Translator"
+import FadeIn from "./ui/fadeIn"
+import Translator from "./ui/translator"
 
 const KeyPoints = () => (
     <section className="my-container">
-        <RevealMotion className="flex flex-wrap justify-start gap-12 my-20 md:gap-0 lg:justify-evenly">
+        <FadeIn className="flex flex-wrap justify-start gap-12 my-20 md:gap-0 lg:justify-evenly">
             <div className="max-w-xs p-2 text-center mx-auto">
                 <BsFillRocketFill className="mb-6 mx-auto text-7xl text-purple" />
                 <h1 className="mb-1 lg:mb-3 text-2xl">
@@ -34,7 +34,7 @@ const KeyPoints = () => (
                     <Translator content="keySectionParentsSubtitle" />
                 </p>
             </div>
-        </RevealMotion>
+        </FadeIn>
     </section>
 )
 

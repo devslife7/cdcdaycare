@@ -1,7 +1,7 @@
 import Image from "next/image"
 import heroBackground from "@/public/images/daycare-hero.webp"
 import HeroButton from "./HeroButton"
-import Translator from "../ui/Translator"
+import Translator from "../ui/translator"
 
 export default function Hero() {
     return (
