@@ -7,7 +7,7 @@ import { CgSpinnerAlt } from "react-icons/cg"
 import { useForm, SubmitHandler } from "react-hook-form"
 import { ZodType, z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { Button } from "../ui/button"
+import { Button, buttonStyles } from "../ui/button"
 import Translator from "../ui/translator"
 
 type FormTypes = {
@@ -81,10 +81,7 @@ export default function ContactForm() {
                         <FaPhoneAlt className="inline-block mr-2 text-green-500 mb-1 text-[1.6rem]" />
                         <span className="opacity-80">(999)999-9999</span>
                     </div>
-                    <a
-                        href="tel:999-999-9999"
-                        className="bg-primary text-white border-[3px] border-solid border-transparent inline-block rounded-md px-4 py-1 text-base hover:border-solid hover:bg-transparent hover:border-[3px] hover:border-green hover:text-primary transition-all ease-in-out duration-300 "
-                    >
+                    <a href="tel:999-999-9999" className={buttonStyles({ size: "sm" })}>
                         <Translator content="ContactUsCallNowButton" />
                     </a>
                 </div>

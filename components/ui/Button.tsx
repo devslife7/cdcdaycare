@@ -14,7 +14,7 @@ const buttonStyles = cva(
                 cancel: "bg-gray-100 text-gray-700 hover:bg-gray-200 focus-visible:ring-gray-500",
             },
             size: {
-                sm: "px-3 py-1 text-xs",
+                sm: "px-4 py-1 text-base",
                 md: "px-4 py-2",
                 lg: "px-6 py-2",
             },
