@@ -7,8 +7,6 @@ export default function NavLinks() {
     const { lang } = useGlobalStore()
     const { changeLang } = useGlobalStore()
 
-    // make the store do this and change store name
-
     return (
         <div className="hidden lg:flex lg:gap-x-7">
             {translator.navLinks[lang].map((link, index) => (

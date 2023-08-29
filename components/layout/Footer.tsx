@@ -1,5 +1,3 @@
-// Dependencies: react-icons
-// npm install react-icons
 import Link from "next/link"
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa"
 

@@ -1,11 +1,11 @@
 "use client"
 import { create } from "zustand"
 
-type StoreType = {
+type GlobalStoreType = {
     lang: "eng" | "esp"
     changeLang: () => void
 }
-export const useGlobalStore = create<StoreType>(set => ({
+export const useGlobalStore = create<GlobalStoreType>(set => ({
     lang: "eng",
     changeLang: () => set(state => ({ lang: state.lang === "eng" ? "esp" : "eng" })),
 }))
