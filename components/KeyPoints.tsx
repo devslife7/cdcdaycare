@@ -1,8 +1,8 @@
 import { MdFamilyRestroom } from "react-icons/md"
 import { BsFillRocketFill } from "react-icons/bs"
 import { AiOutlineSafety } from "react-icons/ai"
-import RevealMotion from "./shared/RevealMotion"
-import Translator from "./shared/Translator"
+import RevealMotion from "./ui/RevealMotion"
+import Translator from "./ui/Translator"
 
 const KeyPoints = () => (
     <section className="my-container">

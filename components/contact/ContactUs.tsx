@@ -1,5 +1,5 @@
-import RevealMotion from "../shared/RevealMotion"
-import Translator from "../shared/Translator"
+import RevealMotion from "../ui/RevealMotion"
+import Translator from "../ui/Translator"
 import ContactForm from "./ContactForm"
 import GoogleMap from "./GoogleMap"
 

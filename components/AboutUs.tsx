@@ -1,7 +1,7 @@
 import Image from "next/image"
 import aboutUsSection from "@/public/images/about-section.jpg"
-import RevealMotion from "./shared/RevealMotion"
-import Translator from "./shared/Translator"
+import RevealMotion from "./ui/RevealMotion"
+import Translator from "./ui/Translator"
 
 export default function AboutUs() {
     return (

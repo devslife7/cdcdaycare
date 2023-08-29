@@ -1,7 +1,7 @@
 import Image from "next/image"
 import philoSection from "@/public/images/philosophy-section.jpg"
-import RevealMotion from "./shared/RevealMotion"
-import Translator from "./shared/Translator"
+import RevealMotion from "./ui/RevealMotion"
+import Translator from "./ui/Translator"
 
 export default function Philosophy() {
     return (
