@@ -5,7 +5,7 @@ import MobileNav from "./MobileNav"
 import classNames from "classnames"
 import { Link as ScrollLink } from "react-scroll"
 import { useStore } from "@/state/store"
-import Button from "@/components/shared/Button"
+import { Button } from "@/components/shared/Button"
 import Image from "next/image"
 import translator from "@/data/translator.json"
 import { useRouter } from "next/router"
@@ -85,7 +85,8 @@ export default function Navbar() {
                     </div>
                     <div className="hidden lg:flex lg:gap-x-7">
                         {renderNavLinks()}
-                        <Button onClick={handleLangChage} size="small" className="bg-blue-900">
+
+                        <Button onClick={handleLangChage} size="sm" className="bg-transparent">
                             {lang !== "eng" ? (
                                 <>
                                     <Image

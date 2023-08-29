@@ -1,68 +1,37 @@
 import { cn } from "@/lib/utils"
 import { VariantProps, cva } from "class-variance-authority"
+import { forwardRef } from "react"
 
-type Props = {
-    variant?: "primary" | "secondary" | "danger" | "cancel"
-    size?: "small" | "medium" | "large"
-    onClick?: (e?: any) => void
-    className?: string
-    children: React.ReactNode
-    disabled?: boolean
-    type?: "button" | "submit" | "reset"
-}
-
-export default function Button({
-    variant = "primary",
-    size = "medium",
-    onClick,
-    className,
-    children,
-    disabled = false,
-    type = "button",
-    ...props
-}: Props) {
-    type VariantType = {
-        primary: string
-        secondary: string
-        danger: string
-        cancel: string
+const buttonStyles = cva(
+    "flex items-center justify-center w-full lg:w-auto px-auto rounded-md transition-all font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 border border-transparent disabled:cursor-not-allowed disabled:opacity-60",
+    {
+        variants: {
+            variant: {
+                primary: "bg-primary text-white hover:bg-primary-600 focus-visible:ring-red-500",
+                secondary: "bg-blue-100 text-blue-700 hover:bg-blue-200 focus-visible:ring-blue-500",
+                danger: "bg-red-100 text-red-600 hover:bg-red-200 focus-visible:ring-red-500",
+                cancel: "bg-gray-100 text-gray-700 hover:bg-gray-200 focus-visible:ring-gray-500",
+            },
+            size: {
+                sm: "px-3 py-1 text-xs",
+                md: "px-4 py-2",
+                lg: "px-6 py-2",
+            },
+        },
+        defaultVariants: {
+            variant: "primary",
+            size: "md",
+        },
     }
-    const variantStyle: VariantType = {
-        primary: "bg-primary text-white hover:bg-primary-600 focus-visible:ring-red-500",
-        secondary: "bg-blue-100 text-blue-700 hover:bg-blue-200 focus-visible:ring-blue-500",
-        danger: "bg-red-100 text-red-600 hover:bg-red-200 focus-visible:ring-red-500",
-        cancel: "bg-gray-100 text-gray-700 hover:bg-gray-200 focus-visible:ring-gray-500",
-    }
+)
 
-    type SizeType = {
-        small: string
-        medium: string
-        large: string
-    }
+interface ButtonProps
+    extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+        VariantProps<typeof buttonStyles> {}
 
-    const sizeStyle: SizeType = {
-        small: "px-3 py-1 text-xs",
-        medium: "px-4 py-2",
-        large: "px-6 py-2",
-    }
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(({ className, variant, size, ...props }, ref) => {
+    return <button ref={ref} className={cn(buttonStyles({ variant, size, className }))} {...props} />
+})
+Button.displayName = "Button"
 
-    const defaultStyle =
-        "flex items-center justify-center w-full lg:w-auto px-auto rounded-md transition-all font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 border border-transparent disabled:cursor-not-allowed disabled:opacity-60"
-
-    return (
-        <button
-            {...props}
-            type={type}
-            disabled={disabled}
-            onClick={onClick}
-            className={cn(
-                defaultStyle,
-                variantStyle[variant as keyof VariantType],
-                sizeStyle[size as keyof SizeType],
-                className
-            )}
-        >
-            {children}
-        </button>
-    )
-}
+export { Button, buttonStyles }
