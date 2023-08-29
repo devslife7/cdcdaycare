@@ -93,6 +93,7 @@ export default function Navbar() {
                                         width={25}
                                         height={15}
                                         alt="spain flag"
+                                        unoptimized
                                         className="mr-1"
                                     />
                                     {"ENG"}
@@ -104,6 +105,7 @@ export default function Navbar() {
                                         width={25}
                                         height={15}
                                         alt="spain flag"
+                                        unoptimized
                                         className="mr-1"
                                     />
                                     {"ESP"}
