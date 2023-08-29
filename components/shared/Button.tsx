@@ -1,13 +1,7 @@
-/*
-    Install dependencies:
-        npm install classnames
-*/
-
-import classNames from "classnames"
+import { cn } from "@/lib/utils"
+import { VariantProps, cva } from "class-variance-authority"
 
 type Props = {
-    startIcon?: React.ReactNode
-    endIcon?: React.ReactNode
     variant?: "primary" | "secondary" | "danger" | "cancel"
     size?: "small" | "medium" | "large"
     onClick?: (e?: any) => void
@@ -61,11 +55,11 @@ export default function Button({
             type={type}
             disabled={disabled}
             onClick={onClick}
-            className={classNames(
-                className,
+            className={cn(
                 defaultStyle,
                 variantStyle[variant as keyof VariantType],
-                sizeStyle[size as keyof SizeType]
+                sizeStyle[size as keyof SizeType],
+                className
             )}
         >
             {children}

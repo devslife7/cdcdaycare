@@ -11,7 +11,7 @@ import translator from "@/data/translator.json"
 import { useRouter } from "next/router"
 
 export default function Navbar() {
-    console.log("render navbar here")
+    console.log("renders navbar")
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     const [scrollNav, setScrollNav] = useState(false)
     const { changeLang } = useStore()
