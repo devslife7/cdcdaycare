@@ -15,7 +15,8 @@ export default function Navbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     const [scrollNav, setScrollNav] = useState(false)
     const { changeLang } = useStore()
-    const currentLang = useStore.getState().lang
+    // const currentLang = useStore.getState().lang
+    const { lang } = useStore()
     // const router = useRouter()
 
     useEffect(() => {
@@ -35,7 +36,7 @@ export default function Navbar() {
     }
 
     const renderNavLinks = () => {
-        return translator.navLinks[currentLang].map((link, index) => (
+        return translator.navLinks[lang].map((link, index) => (
             <ScrollLink
                 key={index}
                 to={link.href}
@@ -53,7 +54,7 @@ export default function Navbar() {
     }
 
     const handleLangChage = () => {
-        if (currentLang === "eng") {
+        if (lang === "eng") {
             changeLang("esp")
             // router.push("/?counter=10", undefined, { shallow: true })
         } else {
@@ -85,7 +86,7 @@ export default function Navbar() {
                     <div className="hidden lg:flex lg:gap-x-7">
                         {renderNavLinks()}
                         <Button onClick={handleLangChage} size="small" className="bg-blue-900">
-                            {currentLang !== "eng" ? (
+                            {lang !== "eng" ? (
                                 <>
                                     <Image
                                         src="https://media-1.api-sports.io/football/teams/2384.png"
@@ -125,7 +126,7 @@ export default function Navbar() {
                     <MobileNav
                         mobileMenuOpen={mobileMenuOpen}
                         setMobileMenuOpen={setMobileMenuOpen}
-                        navLinks={translator.navLinks[currentLang]}
+                        navLinks={translator.navLinks[lang]}
                     />
                 )}
             </header>
