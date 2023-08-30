@@ -71,7 +71,7 @@ export default function ContactForm() {
     }
 
     const inputSyle =
-        "block w-full px-3 py-2 text-sm bg-backgroundGray border rounded-md shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+        "block w-full px-3 py-2 text-sm text-gray-700 bg-backgroundGray border rounded-md shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
 
     return (
         <form onSubmit={handleSubmit(onSubmit)} className="max-w-sm mx-auto space-y-4">
@@ -101,7 +101,7 @@ export default function ContactForm() {
             <textarea className={inputSyle} placeholder="Message*" rows={5} {...register("message")} />
             <span className="text-red-400 text-sm">{errors.message?.message}</span>
             <Button type="submit" disabled={isLoading}>
-                {isLoading && <CgSpinnerAlt className="mr-2 text-xl animate-spin" />}
+                {isLoading && <CgSpinnerAlt className="text-xl animate-spin" />}
                 <Translator content="ContactUsFormButton" />
             </Button>
         </form>
