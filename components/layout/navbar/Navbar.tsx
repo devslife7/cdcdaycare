@@ -2,11 +2,11 @@
 import { useEffect, useState } from "react"
 import { Bars3Icon } from "@heroicons/react/24/outline"
 import MobileNav from "./MobileNav"
-import classNames from "classnames"
 import { Link as ScrollLink } from "react-scroll"
 import { useGlobalStore } from "@/state/store"
 import translator from "@/data/translator.json"
 import NavLinks from "./NavLinks"
+import { cn } from "@/lib/utils"
 
 export default function Navbar() {
     const [scrollNav, setScrollNav] = useState(false)
@@ -33,11 +33,10 @@ export default function Navbar() {
         <nav>
             <header
                 //change srollNav to tailwind animations?
-                className={classNames(
-                    "fixed top-0 z-10 w-full text-white transition-all duration-300 ease-in-out",
+                className={cn(
+                    "fixed bg-black bg-opacity-50 top-0 z-10 w-full text-white transition-all duration-300 ease-in-out",
                     {
-                        "bg-secondary": scrollNav,
-                        "bg-black bg-opacity-50": !scrollNav,
+                        "bg-secondary bg-opacity-100": scrollNav,
                     }
                 )}
             >

@@ -1,12 +1,5 @@
-/*
-  Install dependencies:
-    npm install framer-motion
-    npm install classnames
-*/
-
 "use client"
 import { useEffect, useRef } from "react"
-import classNames from "classnames"
 import { motion, useAnimation, useInView } from "framer-motion"
 
 type Props = {
@@ -30,8 +23,8 @@ export default function FadeIn({ children, className }: Props) {
             variants={{ hidden: { opacity: 0, y: 75 }, visible: { opacity: 1, y: 0 } }}
             initial="hidden"
             animate={mainControls}
-            transition={{ duration: 1.2, delay: 0.2 }}
-            className={classNames(className, "relative w-full")}
+            transition={{ duration: 1.1 }}
+            className={className}
         >
             {children}
         </motion.div>
