@@ -9,7 +9,7 @@ import { ZodType, z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
 // import Button, { buttonStyles } from "../ui/button"
 import Transformer from "../ui/transformer"
-import Bresser, { buttonStyles } from "../ui/bresser"
+import Button, { buttonStyles } from "../ui/button"
 
 type FormTypes = {
     name: string
@@ -101,10 +101,10 @@ export default function ContactForm() {
             <input className={inputSyle} placeholder="Phone (optional)" {...register("phone")} />
             <textarea className={inputSyle} placeholder="Message*" rows={5} {...register("message")} />
             <span className="text-red-400 text-sm">{errors.message?.message}</span>
-            <Bresser type="submit" disabled={isLoading}>
+            <Button type="submit" disabled={isLoading}>
                 {isLoading && <CgSpinnerAlt className="text-xl animate-spin" />}
                 <Transformer content="ContactUsFormButton" />
-            </Bresser>
+            </Button>
         </form>
     )
 }
