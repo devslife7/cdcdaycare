@@ -1,12 +1,13 @@
 "use client"
 import { Link as ScrollLink } from "react-scroll"
-import Translator from "../ui/translator"
-import { buttonStyles } from "../ui/button"
+import Transformer from "../ui/transformer"
+// import { buttonStyles } from "../ui/button"
+import { buttonStyles } from "../ui/bresser"
 
 export default function HeroButton() {
     return (
         <ScrollLink to="contact" className={buttonStyles({ size: "lg" })}>
-            <Translator content="heroButton" />
+            <Transformer content="heroButton" />
         </ScrollLink>
     )
 }

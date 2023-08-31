@@ -1,7 +1,7 @@
 import Image from "next/image"
 import heroBackground from "@/public/images/daycare-hero.webp"
 import HeroButton from "./HeroButton"
-import Translator from "../ui/translator"
+import Transformer from "../ui/transformer"
 
 export default function Hero() {
     return (
@@ -20,13 +20,13 @@ export default function Hero() {
                 <div className="flex items-center h-full text-white my-container">
                     <div className="max-w-4xl py-14 lg:py-20">
                         <h1 className="text-5xl font-extrabold lg:text-7xl relative">
-                            <Translator content="heroTitle" />
+                            <Transformer content="heroTitle" />
                             <span className="font-medium text-primary absolute left-1 -top-[3rem] lg:-top-[4.5rem]">
                                 ___
                             </span>
                         </h1>
                         <p className="max-w-lg mt-5 mb-10 font-light text-md lg:leading-relaxed">
-                            <Translator content="heroSubtext" />
+                            <Transformer content="heroSubtext" />
                         </p>
                         <HeroButton />
                     </div>
