@@ -1,13 +1,14 @@
 import Image from "next/image"
 import HeroButton from "./HeroButton"
 import Translator from "../ui/translator"
+import heroBackground from "@/public/images/daycare-hero.webp"
 
 export default function Hero() {
     return (
         <section id="hero" className="h-[70vh] lg:h-[60vh] relative">
             <div className="absolute w-full h-full -z-10">
                 <Image
-                    src="/images/daycare-hero.webp"
+                    src={heroBackground}
                     className="object-cover w-full h-full"
                     placeholder="blur"
                     priority
