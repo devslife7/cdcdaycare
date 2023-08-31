@@ -13,8 +13,8 @@ export default function NavLinks() {
                 <ScrollLink
                     key={index}
                     to={link.href}
-                    className="px-2 leading-7 transition-colors ease-in duration-200 relative cursor-pointer [&.active]:text-primary overflow-hidden
-                        [&>span]:[&.active]:inline-block [&>span]:[&.active]:translate-x-8"
+                    className="px-2 leading-7 transition-all ease-in duration-200 relative cursor-pointer hover:opacity-50
+                    [&.active]:text-primary [&.active]:hover:opacity-100 overflow-hidden [&>span]:[&.active]:inline-block [&>span]:[&.active]:translate-x-8"
                     spy={true}
                     offset={-63}
                 >
