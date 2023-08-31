@@ -49,7 +49,10 @@ export default function MobileNav({ mobileMenuOpen, setMobileMenuOpen, navLinks 
                                     {link.label}
                                 </ScrollLink>
                             ))}
-                            <div onClick={changeLang} className="flex items-center px-3 cursor-pointer">
+                            <div
+                                onClick={changeLang}
+                                className="flex items-center cursor-pointer py-4 text-sm"
+                            >
                                 {lang !== "eng" ? (
                                     <>
                                         <Image
