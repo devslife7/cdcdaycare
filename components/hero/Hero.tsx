@@ -4,6 +4,13 @@ import heroBackground from "@/public/images/daycare-hero.webp"
 import HeroButton from "./HeroButton"
 import Translator from "../ui/translator"
 
+// resting some comments
+// resting some comments
+// resting some comments
+// resting some comments
+// resting some comments
+// resting some comments
+
 export default function Hero() {
     return (
         <section id="hero" className="h-[70vh] lg:h-[60vh] relative">
