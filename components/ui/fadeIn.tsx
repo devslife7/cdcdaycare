@@ -5,7 +5,9 @@ const FadeInStaggerContext = createContext(false)
 
 const viewport = { once: true, margin: "0px 0px -200px" }
 
-export default function FadeIn(props: {}) {
+interface DivProps extends React.HTMLAttributes<HTMLDivElement> {}
+
+export default function FadeIn(props: any) {
     const shouldReduceMotion = useReducedMotion()
     const isInStaggerGroup = useContext(FadeInStaggerContext)
 
