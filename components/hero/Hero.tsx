@@ -12,7 +12,6 @@ export default function Hero() {
                     className="object-cover w-full h-full"
                     placeholder="blur"
                     priority
-                    unoptimized
                     alt="Day Care Children"
                 />
             </div>
