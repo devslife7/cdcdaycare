@@ -15,7 +15,7 @@ type Props = {
     children?: React.ReactNode
 }
 
-export default function MyModal({
+export default function Modal({
     closeModal,
     isModalOpen,
     title = "Title",

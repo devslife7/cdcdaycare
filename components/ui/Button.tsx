@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils"
 import { VariantProps, cva } from "class-variance-authority"
 import { forwardRef } from "react"
 
-const buttonStyles = cva(
+export const buttonStyles = cva(
     "inline-flex cursor-pointer items-center gap-2 justify-center w-full lg:w-auto px-auto rounded-md transition-all font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 border border-transparent disabled:cursor-not-allowed disabled:opacity-60",
     {
         variants: {
@@ -35,4 +35,4 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(({ className, variant,
 })
 Button.displayName = "Button"
 
-export { Button, buttonStyles }
+export default Button

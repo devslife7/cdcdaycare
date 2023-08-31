@@ -7,7 +7,7 @@ import { CgSpinnerAlt } from "react-icons/cg"
 import { useForm, SubmitHandler } from "react-hook-form"
 import { ZodType, z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { Button, buttonStyles } from "../ui/Button"
+import Button, { buttonStyles } from "../ui/button"
 import Translator from "../ui/translator"
 
 type FormTypes = {
