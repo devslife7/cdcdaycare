@@ -100,7 +100,7 @@ export default function ContactForm() {
             <input className={inputSyle} placeholder="Phone (optional)" {...register("phone")} />
             <textarea className={inputSyle} placeholder="Message*" rows={5} {...register("message")} />
             <span className="text-red-400 text-sm">{errors.message?.message}</span>
-            <Button type="submit" disabled={isLoading}>
+            <Button type="submit" mobile disabled={isLoading}>
                 {isLoading && <CgSpinnerAlt className="text-xl animate-spin" />}
                 <Translator content="ContactUsFormButton" />
             </Button>
