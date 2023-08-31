@@ -7,9 +7,8 @@ import { CgSpinnerAlt } from "react-icons/cg"
 import { useForm, SubmitHandler } from "react-hook-form"
 import { ZodType, z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
-// import Button, { buttonStyles } from "../ui/button"
-import Transformer from "../ui/transformer"
 import Button, { buttonStyles } from "../ui/button"
+import Translator from "../ui/translator"
 
 type FormTypes = {
     name: string
@@ -83,7 +82,7 @@ export default function ContactForm() {
                         <span className="opacity-80">(999)999-9999</span>
                     </div>
                     <a href="tel:999-999-9999" className={buttonStyles({ size: "sm" })}>
-                        <Transformer content="ContactUsCallNowButton" />
+                        <Translator content="ContactUsCallNowButton" />
                     </a>
                 </div>
                 <div>
@@ -92,7 +91,7 @@ export default function ContactForm() {
                 </div>
             </div>
             <h1 className="mb-2 text-4xl font-extrabold opacity-70 text-secondary">
-                <Transformer content="ContactUsFormTitle" />
+                <Translator content="ContactUsFormTitle" />
             </h1>
             <input className={inputSyle} placeholder="Name*" {...register("name")} />
             <span className="text-red-400 text-sm">{errors.name?.message}</span>
@@ -103,7 +102,7 @@ export default function ContactForm() {
             <span className="text-red-400 text-sm">{errors.message?.message}</span>
             <Button type="submit" disabled={isLoading}>
                 {isLoading && <CgSpinnerAlt className="text-xl animate-spin" />}
-                <Transformer content="ContactUsFormButton" />
+                <Translator content="ContactUsFormButton" />
             </Button>
         </form>
     )
