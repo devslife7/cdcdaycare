@@ -5,8 +5,11 @@ import Translator from "../ui/translator"
 
 export default function HeroButton() {
     return (
-        <ScrollLink to="contact" className={buttonStyles({ size: "lg" })}>
+        // <ScrollLink to="contact" className={buttonStyles({ size: "lg" })}>
+        //     <Translator content="heroButton" />
+        // </ScrollLink>
+        <a href="contact" className={buttonStyles({ size: "lg" })}>
             <Translator content="heroButton" />
-        </ScrollLink>
+        </a>
     )
 }

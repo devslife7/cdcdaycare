@@ -1,4 +1,6 @@
+import { useGlobalStore } from "@/state/store"
 import { XMarkIcon } from "@heroicons/react/24/outline"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { FaChildReaching } from "react-icons/fa6"
 import { Link as ScrollLink } from "react-scroll"
@@ -14,6 +16,8 @@ type Props = {
 
 export default function MobileNav({ mobileMenuOpen, setMobileMenuOpen, navLinks }: Props) {
     const pathname = usePathname()
+    const { lang } = useGlobalStore()
+    const { changeLang } = useGlobalStore()
 
     const closeMobileMenu = () => {
         setMobileMenuOpen(false)
@@ -45,6 +49,33 @@ export default function MobileNav({ mobileMenuOpen, setMobileMenuOpen, navLinks 
                                     {link.label}
                                 </ScrollLink>
                             ))}
+                            <div onClick={changeLang} className="flex items-center px-3 cursor-pointer">
+                                {lang !== "eng" ? (
+                                    <>
+                                        <Image
+                                            src="https://media-1.api-sports.io/football/teams/2384.png"
+                                            width={25}
+                                            height={15}
+                                            alt="spain flag"
+                                            unoptimized
+                                            className="mr-1"
+                                        />
+                                        {"ENG"}
+                                    </>
+                                ) : (
+                                    <>
+                                        <Image
+                                            src="https://media-1.api-sports.io/football/teams/9.png"
+                                            width={25}
+                                            height={15}
+                                            alt="spain flag"
+                                            unoptimized
+                                            className="mr-1"
+                                        />
+                                        {"ESP"}
+                                    </>
+                                )}
+                            </div>
                         </div>
                     </div>
                 </div>

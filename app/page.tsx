@@ -8,7 +8,7 @@ import Navbar from "@/components/layout/navbar/Navbar"
 
 export default function Home() {
     return (
-        <div>
+        <>
             <Navbar />
             <Hero />
             <KeyPoints />
@@ -16,6 +16,6 @@ export default function Home() {
             <AboutUs />
             <ContactUs />
             <Footer />
-        </div>
+        </>
     )
 }
