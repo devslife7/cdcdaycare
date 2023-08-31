@@ -1,5 +1,5 @@
 import FadeIn from "../ui/fadeIn"
-import { Translator } from "../ui/translator"
+import Translator from "../ui/translator"
 import ContactForm from "./ContactForm"
 import GoogleMap from "./GoogleMap"
 

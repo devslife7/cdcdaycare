@@ -1,7 +1,7 @@
 import Image from "next/image"
 import philoSection from "@/public/images/philosophy-section.jpg"
 import FadeIn from "./ui/fadeIn"
-import { Translator } from "./ui/translator"
+import Translator from "./ui/translator"
 
 export default function Philosophy() {
     return (
