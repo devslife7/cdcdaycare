@@ -1,7 +1,7 @@
 "use client"
 import { Link as ScrollLink } from "react-scroll"
 import Translator from "../ui/translator"
-import { buttonStyles } from "@/components/ui/button"
+import { buttonStyles } from "@/components/ui/Button"
 
 export default function HeroButton() {
     return (
