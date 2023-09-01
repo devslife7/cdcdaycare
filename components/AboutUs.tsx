@@ -18,7 +18,12 @@ export default function AboutUs() {
                     </p>
                 </div>
 
-                <Image className="mx-auto" src={aboutUsSection} unoptimized alt="Child doing homework" />
+                <Image
+                    src={aboutUsSection}
+                    unoptimized
+                    alt="Child doing homework"
+                    className="mx-auto shadow-custom-left shadow-purple"
+                />
             </FadeIn>
         </section>
     )

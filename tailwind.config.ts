@@ -34,6 +34,10 @@ const config: Config = {
                     DEFAULT: "#ffb100",
                 },
             },
+            boxShadow: {
+                "custom-left": "-15px 15px 0px 0px rgba(0, 0, 0, 0.3)",
+                "custom-right": "15px 15px 0px 0px rgba(0, 0, 0, 0.3)",
+            },
         },
     },
     plugins: [],

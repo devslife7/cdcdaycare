@@ -1,5 +1,5 @@
 import Image from "next/image"
-import philoSection from "@/public/images/philosophy-section.jpg"
+import philoSection from "@/public/images/cdcboypainting.jpeg"
 import FadeIn from "./ui/fadeIn"
 import Translator from "./ui/translator"
 
@@ -16,7 +16,12 @@ export default function Philosophy() {
                         <Translator content="philosophySubtext" />
                     </p>
                 </div>
-                <Image className="mx-auto" src={philoSection} unoptimized alt="Child doing homework" />
+                <Image
+                    className="mx-auto shadow-custom-right shadow-primary"
+                    src={philoSection}
+                    unoptimized
+                    alt="Child doing homework"
+                />
             </FadeIn>
         </section>
     )
