@@ -28,7 +28,7 @@
                 "href": "philosophy"
             },
             {
-                "label": "Acerca",
+                "label": "Nosotros",
                 "href": "about-us"
             },
             {
@@ -85,9 +85,13 @@
         "eng": "ABOUT US",
         "esp": "SOBRE NOSOTROS"
     },
-    "AboutUsSubtext": {
-        "eng": "We believe that with love and care every child can learn. That is why we provide all the elements for a strong foundation of success. We take pride in creating a healthy environment with wholesome activities. We purposely fill our time with active, fun-filled programs that engage the whole child's developing mind and body.",
-        "esp": "Creemos que con amor y cuidado cada niño puede aprender. Es por eso que proporcionamos todos los elementos para una base sólida de éxito. Estamos orgullosos de crear un ambiente saludable con actividades saludables. A propósito, llenamos nuestro tiempo con programas activos y divertidos que involucran el desarrollo integral de la mente y el cuerpo del niño."
+    "AboutUsSubtext1": {
+        "eng": "At CDC Day Care, we’re proud to provide a caring and safe environment for your children. By following our mission, vision and values, we create a nurturing, stimulating and welcoming learning environment for all children.",
+        "esp": "En CDC Day Care, estamos orgullosos de brindar un ambiente seguro y afectuoso para sus hijos. Siguiendo nuestra misión, visión y valores, creamos un entorno de aprendizaje enriquecedor, estimulante y acogedor para todos los niños."
+    },
+    "AboutUsSubtext2": {
+        "eng": "We provide our students with the tools they need for future happiness and success. Our unique programs incorporate a variety of educational theories, while always keeping the child’s best interests in mind and allowing for hands-on, experiential learning. Get in touch to learn more!",
+        "esp": "Brindamos a nuestros estudiantes las herramientas que necesitan para su felicidad y éxito en el futuro. Nuestros programas únicos incorporan una variedad de teorías educativas, manteniendo siempre en mente los mejores intereses del niño y permitiendo un aprendizaje práctico y experiencial. ¡Ponte en contacto para obtener más información!"
     },
     "ContactUsTitle": {
         "eng": "Contact Us",
