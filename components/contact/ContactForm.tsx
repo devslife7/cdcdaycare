@@ -60,7 +60,6 @@ export default function ContactForm() {
         `
         emailjs.sendForm("service_b27ezi3", "template_c4rqhh1", formData, "hpeVPBIjR0dTtIqex").then(
             result => {
-                console.log(result.text)
                 setIsLoading(false)
                 reset(defaultValues)
             },
