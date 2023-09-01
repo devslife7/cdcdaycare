@@ -4,6 +4,9 @@ import FadeIn from "./ui/fadeIn"
 import Translator from "./ui/translator"
 
 export default function AboutUs() {
+    // test
+    // test
+    // test
     return (
         <section id="about-us" className="py-24">
             <FadeIn className="my-container lg:flex lg:flex-row-reverse lg:justify-evenly space-y-10">
