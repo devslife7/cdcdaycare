@@ -42,7 +42,7 @@ export default function Footer() {
 
     return (
         <footer className="sticky mt-auto text-white bg-secondary top-full">
-            <div className="flex flex-col items-center justify-center container mx-auto px-4 lg:px-8 h-[29rem] gap-y-4 md:flex-row md:justify-between">
+            <div className="flex flex-col items-center justify-center container mx-auto px-4 lg:px-8 h-[29rem] gap-y-12 md:flex-row md:justify-between">
                 <div className="text-xl text-center font-semibold">
                     <span className="text-primary">CDC</span> Day Care
                 </div>
