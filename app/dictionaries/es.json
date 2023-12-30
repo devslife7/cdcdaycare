@@ -1,6 +1,64 @@
 {
-  "hello": {
-    "title": "!Hola Mundo!",
-    "text": "Construlla una aplicación"
+  "navbar": {
+    "locale": "es",
+    "navLinks": [
+      {
+        "label": "Casa",
+        "href": "hero"
+      },
+      {
+        "label": "Filosofía",
+        "href": "philosophy"
+      },
+      {
+        "label": "Nosotros",
+        "href": "about-us"
+      },
+      {
+        "label": "Contacto",
+        "href": "contact"
+      }
+    ]
+  },
+  "hero": {
+    "title": "Un refugio seguro para mentes en crecimiento",
+    "subtitle": "Nuestros espacios aptos para niños están diseñados para fomentar la exploración y al mismo tiempo proporcionar un entorno seguro para el crecimiento y el desarrollo.",
+    "button": "Reserva visita gratuita"
+  },
+  "keypoints": {
+    "mission": {
+      "title": "Misión",
+      "subtitle": "Nuestra misión es crear un entorno enriquecedor y estimulante donde los niños puedan explorar, aprender y crecer."
+    },
+    "safety": {
+      "title": "Seguridad",
+      "subtitle": "La seguridad de los niños es nuestra prioridad número uno. Nuestro personal está capacitado en primeros auxilios y RCP, y todos los empleados deben someterse a una verificación de antecedentes penales."
+    },
+    "parents": {
+      "title": "Padres",
+      "subtitle": "Sabemos que los padres tienen horarios ocupados, por lo que ofrecemos horarios flexibles y una variedad de programas para satisfacer sus necesidades."
+    }
+  },
+  "philosophy": {
+    "title": "FILOSOFÍA",
+    "subtitle": "Creemos que con amor y cuidado cada niño puede aprender. Es por eso que proporcionamos todos los elementos para una base sólida de éxito. Estamos orgullosos de crear un ambiente saludable con actividades saludables. A propósito, llenamos nuestro tiempo con programas activos y divertidos que involucran el desarrollo integral de la mente y el cuerpo del niño."
+  },
+  "about": {
+    "title": "SOBRE NOSOTROS",
+    "subtitle1": "En CDC Day Care, estamos orgullosos de brindar un ambiente seguro y afectuoso para sus hijos. Siguiendo nuestra misión, visión y valores, creamos un entorno de aprendizaje enriquecedor, estimulante y acogedor para todos los niños.",
+    "subtitle2": "Brindamos a nuestros estudiantes las herramientas que necesitan para su felicidad y éxito en el futuro. Nuestros programas únicos incorporan una variedad de teorías educativas, manteniendo siempre en mente los mejores intereses del niño y permitiendo un aprendizaje práctico y experiencial. ¡Ponte en contacto para obtener más información!"
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "form": {
+      "call": "Llámanos",
+      "title": "¡Programe un recorrido gratuito!",
+      "name": "Nombre",
+      "email": "Correo electrónico",
+      "phone": "Teléfono",
+      "optional": "opcional",
+      "message": "Mensaje",
+      "submit": "Enviar"
+    }
   }
 }

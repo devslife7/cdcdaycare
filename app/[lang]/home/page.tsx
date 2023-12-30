@@ -10,19 +10,13 @@ import Navbar from "@/components/layout/navbar/Navbar"
 export default async function Main({ params: { lang } }: { params: { lang: string } }) {
   const dict = await getDictionary(lang)
   return (
-    // <div className="flex justify-center h-screen items-center text-5xl">
-    //   <div>
-    //     <h2>{dict.hello.title}</h2>
-    //     <p>{dict.hello.text}</p>
-    //   </div>
-    // </div>
     <>
-      <Navbar dictionary={dict.hello} />
-      <Hero dictionary={dict.hello} />
-      <KeyPoints dictionary={dict.hello} />
-      <Philosophy dictionary={dict.hello} />
-      <AboutUs dictionary={dict.hello} />
-      <ContactUs dictionary={dict.hello} />
+      <Navbar dictionary={dict.navbar} />
+      <Hero dictionary={dict.hero} />
+      <KeyPoints dictionary={dict.keypoints} />
+      <Philosophy dictionary={dict.philosophy} />
+      <AboutUs dictionary={dict.about} />
+      <ContactUs dictionary={dict.contact} />
       <Footer />
     </>
   )

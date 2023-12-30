@@ -7,7 +7,7 @@ export function middleware(request: NextRequest) {
     locale => !pathname.startsWith(`/${locale}`) && pathname !== `/${locale}/`
   )
   if (pathnameIsMissingLocale) {
-    return NextResponse.redirect(new URL(`/en/${pathname}`, request.url))
+    return NextResponse.redirect(new URL(`/en/home`, request.url))
   }
 }
 

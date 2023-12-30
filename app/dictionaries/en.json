@@ -1,6 +1,64 @@
 {
-  "hello": {
-    "title": "Hello World!",
-    "text": "Let's build a Next.js app"
+  "navbar": {
+    "locale": "en",
+    "navLinks": [
+      {
+        "label": "Home",
+        "href": "hero"
+      },
+      {
+        "label": "Philosophy",
+        "href": "philosophy"
+      },
+      {
+        "label": "About Us",
+        "href": "about-us"
+      },
+      {
+        "label": "Contact",
+        "href": "contact"
+      }
+    ]
+  },
+  "hero": {
+    "title": "A Safe Haven for Growing Minds",
+    "subtitle": "Our child-friendly spaces are designed to encourage exploration while providing a safe and secure environment for growth and development.",
+    "button": "Schedule free tour"
+  },
+  "keypoints": {
+    "mission": {
+      "title": "Mission",
+      "subtitle": "Our mission is to create a nurturing and stimulating environment where children can explore, learn, and grow."
+    },
+    "safety": {
+      "title": "Safety",
+      "subtitle": "Children's safety is our number one priority. Our staff is trained in first aid and CPR, and all employees must undergo a criminal background check."
+    },
+    "parents": {
+      "title": "Parents",
+      "subtitle": "We know that parents have busy schedules, so we offer flexible hours and a variety of programs to meet their needs."
+    }
+  },
+  "philosophy": {
+    "title": "PHILOSOPHY",
+    "subtitle": "We believe that with love and care every child can learn. That is why we provide all the elements for a strong foundation of success. We take pride in creating a healthy environment with wholesome activities. We purposely fill our time with active, fun-filled programs that engage the whole child's developing mind and body."
+  },
+  "about": {
+    "title": "ABOUT US",
+    "subtitle1": "At CDC Day Care, we’re proud to provide a caring and safe environment for your children. By following our mission, vision and values, we create a nurturing, stimulating and welcoming learning environment for all children.",
+    "subtitle2": "En CDC Day Care, estamos orgullosos de brindar un ambiente seguro y afectuoso para sus hijos. Siguiendo nuestra misión, visión y valores, creamos un entorno de aprendizaje enriquecedor, estimulante y acogedor para todos los niños."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "form": {
+      "call": "Call now",
+      "title": "Schedule a free tour!",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "optional": "optional",
+      "message": "Message",
+      "submit": "Send"
+    }
   }
 }

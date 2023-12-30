@@ -3,15 +3,15 @@ import { useEffect, useState } from "react"
 import { Bars3Icon } from "@heroicons/react/24/outline"
 import MobileNav from "./MobileNav"
 import { Link as ScrollLink } from "react-scroll"
-import { useGlobalStore } from "@/state/store"
-import translator from "@/data/translator.json"
 import NavLinks from "./NavLinks"
 import { cn } from "@/lib/utils"
+import Link from "next/link"
+import EspFlag from "@/public/icons/espFlag"
+import UsFlag from "@/public/icons/usFlag"
 
 export default function Navbar({ dictionary }: { dictionary: any }) {
   const [scrollNav, setScrollNav] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const { lang } = useGlobalStore()
 
   useEffect(() => {
     window.addEventListener("scroll", changeNav)
@@ -47,10 +47,21 @@ export default function Navbar({ dictionary }: { dictionary: any }) {
                 <span className="text-primary">CDC</span> Day Care
               </span>
             </ScrollLink>
-            <div>{dictionary.title} </div>
-            <div>{dictionary.text} </div>
           </div>
-          <NavLinks />
+          <div className="ml-8 lg:hidden">
+            {dictionary.locale === "en" ? (
+              <Link href="/es/home" className="flex items-center">
+                <EspFlag className="w-8 h-8 mr-2 inline" />
+                <span>ESP</span>
+              </Link>
+            ) : (
+              <Link href="/en/home" className="flex items-center">
+                <UsFlag className="mr-2 inline w-8 h-8" />
+                <span>ENG</span>
+              </Link>
+            )}
+          </div>
+          <NavLinks dictionary={dictionary} />
           <div className="flex lg:hidden">
             <button
               type="button"
@@ -66,7 +77,7 @@ export default function Navbar({ dictionary }: { dictionary: any }) {
           <MobileNav
             mobileMenuOpen={mobileMenuOpen}
             setMobileMenuOpen={setMobileMenuOpen}
-            navLinks={translator.navLinks[lang]}
+            dictionary={dictionary}
           />
         )}
       </header>
