@@ -28,14 +28,14 @@ export default function NavLinks({ dictionary }: { dictionary: any }) {
         </ScrollLink>
       ))}
       {dictionary.locale !== "es" ? (
-        <Link href="/es/home">
-          <UsFlag className="w-8 h-8 mr-1 inline" />
-          {"ENG"}
+        <Link href="/es/home" className="flex items-center">
+          <UsFlag className="mr-2 inline w-8 h-8" />
+          <span>ENG</span>
         </Link>
       ) : (
-        <Link href="/en/home">
-          <EspFlag className="w-8 h-8 mr-1 inline" />
-          {"ESP"}
+        <Link href="/en/home" className="flex items-center">
+          <EspFlag className="w-8 h-8 mr-2 inline" />
+          <span>ESP</span>
         </Link>
       )}
     </div>
