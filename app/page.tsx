@@ -7,15 +7,15 @@ import Footer from "@/components/layout/Footer"
 import Navbar from "@/components/layout/navbar/Navbar"
 
 export default function Home() {
-    return (
-        <>
-            <Navbar />
-            <Hero />
-            <KeyPoints />
-            <Philosophy />
-            <AboutUs />
-            <ContactUs />
-            <Footer />
-        </>
-    )
+  return (
+    <>
+      <Navbar />
+      <Hero />
+      <KeyPoints />
+      <Philosophy />
+      <AboutUs />
+      <ContactUs />
+      <Footer />
+    </>
+  )
 }
