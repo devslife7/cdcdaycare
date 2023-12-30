@@ -15,8 +15,8 @@ export default async function Main({ params: { lang } }: { params: { lang: strin
       <Hero dictionary={dict.hero} />
       <KeyPoints dictionary={dict.keypoints} />
       <Philosophy dictionary={dict.philosophy} />
-      <AboutUs dictionary={dict.aboutus} />
-      <ContactUs dictionary={dict.contactus} />
+      <AboutUs dictionary={dict.about} />
+      <ContactUs dictionary={dict.contact} />
       <Footer />
     </>
   )
