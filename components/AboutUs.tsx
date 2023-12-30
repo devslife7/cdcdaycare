@@ -18,7 +18,6 @@ export default function AboutUs({ dictionary }: { dictionary: any }) {
 
         <Image
           src={aboutUsSection}
-          unoptimized
           alt="Child playing"
           className="mx-auto w-auto h-auto shadow-custom-left shadow-purple"
         />

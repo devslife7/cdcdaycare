@@ -16,7 +16,6 @@ export default function Philosophy({ dictionary }: { dictionary: any }) {
         <Image
           className="mx-auto shadow-custom-right shadow-primary"
           src={philoSection}
-          unoptimized
           alt="Child doing homework"
         />
       </FadeIn>
