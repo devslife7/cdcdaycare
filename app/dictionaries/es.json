@@ -1,8 +1,4 @@
 {
-  "hello": {
-    "title": "!Hola Mundo!",
-    "text": "Construlla una aplicación"
-  },
   "navbar": {
     "locale": "es",
     "navLinks": [

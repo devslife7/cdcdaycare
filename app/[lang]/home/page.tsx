@@ -12,11 +12,11 @@ export default async function Main({ params: { lang } }: { params: { lang: strin
   return (
     <>
       <Navbar dictionary={dict.navbar} />
-      <Hero dictionary={dict.hello} />
-      <KeyPoints dictionary={dict.hello} />
-      <Philosophy dictionary={dict.hello} />
-      <AboutUs dictionary={dict.hello} />
-      <ContactUs dictionary={dict.hello} />
+      <Hero dictionary={dict.hero} />
+      <KeyPoints dictionary={dict.keypoints} />
+      <Philosophy dictionary={dict.philosophy} />
+      <AboutUs dictionary={dict.aboutus} />
+      <ContactUs dictionary={dict.contactus} />
       <Footer />
     </>
   )

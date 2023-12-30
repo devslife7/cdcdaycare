@@ -1,8 +1,4 @@
 {
-  "hello": {
-    "title": "Hello World!",
-    "text": "Let's build a Next.js app"
-  },
   "navbar": {
     "locale": "en",
     "navLinks": [
