@@ -50,11 +50,13 @@
   },
   "contact": {
     "title": "Contact Us",
-    "call-button": "Call now",
     "form": {
+      "call": "Call now",
       "title": "Schedule a free tour!",
       "name": "Name",
+      "email": "Email",
       "phone": "Phone",
+      "optional": "optional",
       "message": "Message",
       "submit": "Send"
     }

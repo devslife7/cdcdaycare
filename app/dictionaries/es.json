@@ -50,11 +50,13 @@
   },
   "contact": {
     "title": "Contáctanos",
-    "call-button": "Llámanos",
     "form": {
+      "call": "Llámanos",
       "title": "¡Programe un recorrido gratuito!",
       "name": "Nombre",
+      "email": "Correo electrónico",
       "phone": "Teléfono",
+      "optional": "opcional",
       "message": "Mensaje",
       "submit": "Enviar"
     }

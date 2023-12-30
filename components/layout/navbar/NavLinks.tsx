@@ -9,7 +9,6 @@ import Link from "next/link"
 export default function NavLinks({ dictionary }: { dictionary: any }) {
   const { lang } = useGlobalStore()
   const { changeLang } = useGlobalStore()
-  console.log("dictionary", dictionary)
 
   return (
     <div className="hidden lg:flex lg:gap-x-7">
