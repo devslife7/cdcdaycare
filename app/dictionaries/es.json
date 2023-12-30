@@ -2,5 +2,26 @@
   "hello": {
     "title": "!Hola Mundo!",
     "text": "Construlla una aplicación"
+  },
+  "navbar": {
+    "locale": "es",
+    "navLinks": [
+      {
+        "label": "Casa",
+        "href": "hero"
+      },
+      {
+        "label": "Filosofía",
+        "href": "philosophy"
+      },
+      {
+        "label": "Nosotros",
+        "href": "about-us"
+      },
+      {
+        "label": "Contacto",
+        "href": "contact"
+      }
+    ]
   }
 }

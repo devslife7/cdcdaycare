@@ -2,5 +2,26 @@
   "hello": {
     "title": "Hello World!",
     "text": "Let's build a Next.js app"
+  },
+  "navbar": {
+    "locale": "en",
+    "navLinks": [
+      {
+        "label": "Home",
+        "href": "hero"
+      },
+      {
+        "label": "Philosophy",
+        "href": "philosophy"
+      },
+      {
+        "label": "About Us",
+        "href": "about-us"
+      },
+      {
+        "label": "Contact",
+        "href": "contact"
+      }
+    ]
   }
 }

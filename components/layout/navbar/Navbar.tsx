@@ -47,10 +47,8 @@ export default function Navbar({ dictionary }: { dictionary: any }) {
                 <span className="text-primary">CDC</span> Day Care
               </span>
             </ScrollLink>
-            <div>{dictionary.title} </div>
-            <div>{dictionary.text} </div>
           </div>
-          <NavLinks />
+          <NavLinks dictionary={dictionary} />
           <div className="flex lg:hidden">
             <button
               type="button"
@@ -66,7 +64,7 @@ export default function Navbar({ dictionary }: { dictionary: any }) {
           <MobileNav
             mobileMenuOpen={mobileMenuOpen}
             setMobileMenuOpen={setMobileMenuOpen}
-            navLinks={translator.navLinks[lang]}
+            navLinks={dictionary.navLinks}
           />
         )}
       </header>

@@ -9,13 +9,13 @@ import Navbar from "@/components/layout/navbar/Navbar"
 export default function Home() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar />
       <Hero />
       <KeyPoints />
       <Philosophy />
       <AboutUs />
       <ContactUs />
-      <Footer />
+      <Footer /> */}
     </>
   )
 }

@@ -11,7 +11,7 @@ export default async function Main({ params: { lang } }: { params: { lang: strin
   const dict = await getDictionary(lang)
   return (
     <>
-      <Navbar dictionary={dict.hello} />
+      <Navbar dictionary={dict.navbar} />
       <Hero dictionary={dict.hello} />
       <KeyPoints dictionary={dict.hello} />
       <Philosophy dictionary={dict.hello} />
