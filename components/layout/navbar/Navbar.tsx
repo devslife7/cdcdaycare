@@ -5,6 +5,9 @@ import MobileNav from "./MobileNav"
 import { Link as ScrollLink } from "react-scroll"
 import NavLinks from "./NavLinks"
 import { cn } from "@/lib/utils"
+import Link from "next/link"
+import EspFlag from "@/public/icons/espFlag"
+import UsFlag from "@/public/icons/usFlag"
 
 export default function Navbar({ dictionary }: { dictionary: any }) {
   const [scrollNav, setScrollNav] = useState(false)
@@ -45,6 +48,19 @@ export default function Navbar({ dictionary }: { dictionary: any }) {
               </span>
             </ScrollLink>
           </div>
+          <div className="ml-8 lg:hidden">
+            {dictionary.locale === "en" ? (
+              <Link href="/es/home" className="flex items-center">
+                <EspFlag className="w-8 h-8 mr-2 inline" />
+                <span>ESP</span>
+              </Link>
+            ) : (
+              <Link href="/en/home" className="flex items-center">
+                <UsFlag className="mr-2 inline w-8 h-8" />
+                <span>ENG</span>
+              </Link>
+            )}
+          </div>
           <NavLinks dictionary={dictionary} />
           <div className="flex lg:hidden">
             <button
@@ -61,7 +77,7 @@ export default function Navbar({ dictionary }: { dictionary: any }) {
           <MobileNav
             mobileMenuOpen={mobileMenuOpen}
             setMobileMenuOpen={setMobileMenuOpen}
-            navLinks={dictionary.navLinks}
+            dictionary={dictionary}
           />
         )}
       </header>
