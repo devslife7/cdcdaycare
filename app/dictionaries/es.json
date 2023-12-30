@@ -19,5 +19,14 @@
         "href": "contact"
       }
     ]
-  }
+  },
+  "hero": {
+    "title": "Un refugio seguro para mentes en crecimiento",
+    "subtitle": "Nuestros espacios aptos para niños están diseñados para fomentar la exploración y al mismo tiempo proporcionar un entorno seguro para el crecimiento y el desarrollo.",
+    "button": "Reserva visita gratuita"
+  },
+  "keypoints": {},
+  "philosophy": {},
+  "about": {},
+  "contact": {}
 }

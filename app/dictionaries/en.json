@@ -19,5 +19,14 @@
         "href": "contact"
       }
     ]
-  }
+  },
+  "hero": {
+    "title": "A Safe Haven for Growing Minds",
+    "subtitle": "Our child-friendly spaces are designed to encourage exploration while providing a safe and secure environment for growth and development.",
+    "button": "Schedule free tour"
+  },
+  "keypoints": {},
+  "philosophy": {},
+  "about": {},
+  "contact": {}
 }

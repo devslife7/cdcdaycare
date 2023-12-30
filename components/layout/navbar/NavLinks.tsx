@@ -9,6 +9,7 @@ import Link from "next/link"
 export default function NavLinks({ dictionary }: { dictionary: any }) {
   const { lang } = useGlobalStore()
   const { changeLang } = useGlobalStore()
+  console.log("dictionary", dictionary)
 
   return (
     <div className="hidden lg:flex lg:gap-x-7">
@@ -27,15 +28,15 @@ export default function NavLinks({ dictionary }: { dictionary: any }) {
           </span>
         </ScrollLink>
       ))}
-      {dictionary.locale !== "es" ? (
+      {dictionary.locale === "en" ? (
         <Link href="/es/home" className="flex items-center">
-          <UsFlag className="mr-2 inline w-8 h-8" />
-          <span>ENG</span>
+          <EspFlag className="w-8 h-8 mr-2 inline" />
+          <span>ESP</span>
         </Link>
       ) : (
         <Link href="/en/home" className="flex items-center">
-          <EspFlag className="w-8 h-8 mr-2 inline" />
-          <span>ESP</span>
+          <UsFlag className="mr-2 inline w-8 h-8" />
+          <span>ENG</span>
         </Link>
       )}
     </div>
