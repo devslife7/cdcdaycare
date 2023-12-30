@@ -19,7 +19,7 @@ export default function AboutUs({ dictionary }: { dictionary: any }) {
         <Image
           src={aboutUsSection}
           alt="Child playing"
-          className="mx-auto w-auto h-auto shadow-custom-left shadow-purple"
+          className="mx-auto shadow-custom-left shadow-purple"
         />
       </FadeIn>
     </section>
