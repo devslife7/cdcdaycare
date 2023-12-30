@@ -20,7 +20,7 @@ export default function AboutUs({ dictionary }: { dictionary: any }) {
           src={aboutUsSection}
           unoptimized
           alt="Child playing"
-          className="mx-auto shadow-custom-left shadow-purple"
+          className="mx-auto w-auto h-auto shadow-custom-left shadow-purple"
         />
       </FadeIn>
     </section>
