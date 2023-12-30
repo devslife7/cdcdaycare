@@ -3,15 +3,12 @@ import { useEffect, useState } from "react"
 import { Bars3Icon } from "@heroicons/react/24/outline"
 import MobileNav from "./MobileNav"
 import { Link as ScrollLink } from "react-scroll"
-import { useGlobalStore } from "@/state/store"
-import translator from "@/data/translator.json"
 import NavLinks from "./NavLinks"
 import { cn } from "@/lib/utils"
 
 export default function Navbar({ dictionary }: { dictionary: any }) {
   const [scrollNav, setScrollNav] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const { lang } = useGlobalStore()
 
   useEffect(() => {
     window.addEventListener("scroll", changeNav)

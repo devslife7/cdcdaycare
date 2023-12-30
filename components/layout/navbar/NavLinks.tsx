@@ -1,15 +1,9 @@
-import Image from "next/image"
-import translator from "@/data/translator.json"
-import { useGlobalStore } from "@/state/store"
 import { Link as ScrollLink } from "react-scroll"
 import UsFlag from "@/public/icons/usFlag"
 import EspFlag from "@/public/icons/espFlag"
 import Link from "next/link"
 
 export default function NavLinks({ dictionary }: { dictionary: any }) {
-  const { lang } = useGlobalStore()
-  const { changeLang } = useGlobalStore()
-
   return (
     <div className="hidden lg:flex lg:gap-x-7">
       {dictionary.navLinks.map((link: any, index: number) => (

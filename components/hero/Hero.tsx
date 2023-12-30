@@ -1,6 +1,5 @@
 import Image from "next/image"
 import HeroButton from "./HeroButton"
-import Translator from "../ui/translator"
 import heroBackground from "@/public/images/daycare-hero.webp"
 
 export default function Hero({ dictionary }: { dictionary: any }) {

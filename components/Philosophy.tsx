@@ -1,7 +1,6 @@
 import Image from "next/image"
 import philoSection from "@/public/images/cdcboypainting.jpeg"
 import FadeIn from "./ui/fadeIn"
-import Translator from "./ui/translator"
 
 export default function Philosophy({ dictionary }: { dictionary: any }) {
   return (
