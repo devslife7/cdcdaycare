@@ -68,7 +68,7 @@ export default function ContactForm({ dictionary }: { dictionary: any }) {
     )
   }
 
-  const inputSyle =
+  const inputStyle =
     "block w-full px-3 py-2 text-sm text-gray-700 bg-backgroundGray border rounded-md shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
 
   return (
@@ -89,22 +89,24 @@ export default function ContactForm({ dictionary }: { dictionary: any }) {
         </div>
       </div>
       <h1 className="mb-2 text-4xl font-extrabold opacity-70 text-secondary">{dictionary.title}</h1>
-      <input className={inputSyle} placeholder={`${dictionary.name}*`} {...register("name")} />
+      <input className={inputStyle} placeholder={`${dictionary.name}*`} {...register("name")} />
       <span className="text-red-400 text-sm">{errors.name?.message}</span>
-      <input className={inputSyle} placeholder={`${dictionary.email}*`} {...register("email")} />
+      <input className={inputStyle} placeholder={`${dictionary.email}*`} {...register("email")} />
       <span className="text-red-400 text-sm">{errors.email?.message}</span>
       <input
-        className={inputSyle}
+        className={inputStyle}
         placeholder={`${dictionary.phone} (${dictionary.optional})`}
         {...register("phone")}
       />
-      <textarea
-        className={inputSyle}
-        placeholder={`${dictionary.message}*`}
-        rows={5}
-        {...register("message")}
-      />
-      <span className="text-red-400 text-sm">{errors.message?.message}</span>
+      <div>
+        <textarea
+          className={inputStyle}
+          placeholder={`${dictionary.message}*`}
+          rows={5}
+          {...register("message")}
+        />
+        <span className="text-red-400 text-sm">{errors.message?.message}</span>
+      </div>
       <Button type="submit" mobile disabled={isLoading}>
         {isLoading && <CgSpinnerAlt className="text-xl animate-spin" />}
         {dictionary.submit}
