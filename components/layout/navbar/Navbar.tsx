@@ -50,12 +50,12 @@ export default function Navbar({ dictionary }: { dictionary: any }) {
           </div>
           <div className="ml-8 lg:hidden">
             {dictionary.locale === "en" ? (
-              <Link href="/es/home" className="flex items-center">
+              <Link href="/es/home" className="flex items-center" scroll={false}>
                 <EspFlag className="w-8 h-8 mr-2 inline" />
                 <span>ESP</span>
               </Link>
             ) : (
-              <Link href="/en/home" className="flex items-center">
+              <Link href="/en/home" className="flex items-center" scroll={false}>
                 <UsFlag className="mr-2 inline w-8 h-8" />
                 <span>ENG</span>
               </Link>
@@ -74,11 +74,7 @@ export default function Navbar({ dictionary }: { dictionary: any }) {
           </div>
         </nav>
         {mobileMenuOpen && (
-          <MobileNav
-            mobileMenuOpen={mobileMenuOpen}
-            setMobileMenuOpen={setMobileMenuOpen}
-            dictionary={dictionary}
-          />
+          <MobileNav mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen} dictionary={dictionary} />
         )}
       </header>
     </nav>
