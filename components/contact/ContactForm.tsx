@@ -99,12 +99,7 @@ export default function ContactForm({ dictionary }: { dictionary: any }) {
         {...register("phone")}
       />
       <div>
-        <textarea
-          className={inputStyle}
-          placeholder={`${dictionary.message}*`}
-          rows={5}
-          {...register("message")}
-        />
+        <textarea className={inputStyle} placeholder={`${dictionary.message}*`} rows={5} {...register("message")} />
         <span className="text-red-400 text-sm">{errors.message?.message}</span>
       </div>
       <Button type="submit" mobile disabled={isLoading}>
