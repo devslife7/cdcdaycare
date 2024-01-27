@@ -1,5 +1,5 @@
 import Image from "next/image"
-import aboutUsSection from "@/public/images/about-section.jpg"
+import aboutUsSection from "@/public/images/daycare-toys.webp"
 import FadeIn from "./ui/fadeIn"
 
 export default function AboutUs({ dictionary }: { dictionary: any }) {
@@ -16,11 +16,7 @@ export default function AboutUs({ dictionary }: { dictionary: any }) {
           <p className="text-lg font-[250] leading-8 text-purple-950">{dictionary.subtitle2}</p>
         </div>
 
-        <Image
-          src={aboutUsSection}
-          alt="Child playing"
-          className="mx-auto shadow-custom-left shadow-purple"
-        />
+        <Image src={aboutUsSection} alt="Child playing" className="mx-auto shadow-custom-left shadow-purple" />
       </FadeIn>
     </section>
   )
