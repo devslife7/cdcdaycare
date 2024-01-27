@@ -1,7 +1,4 @@
 import { Link as ScrollLink } from "react-scroll"
-import UsFlag from "@/public/icons/usFlag"
-import EspFlag from "@/public/icons/espFlag"
-import Link from "next/link"
 
 export default function NavLinks({ dictionary }: { dictionary: any }) {
   return (
@@ -21,17 +18,6 @@ export default function NavLinks({ dictionary }: { dictionary: any }) {
           </span>
         </ScrollLink>
       ))}
-      {dictionary.locale === "en" ? (
-        <Link href="/es/home" className="flex items-center" scroll={false}>
-          <EspFlag className="w-8 h-8 mr-2 inline" />
-          <span>ESP</span>
-        </Link>
-      ) : (
-        <Link href="/en/home" className="flex items-center" scroll={false}>
-          <UsFlag className="mr-2 inline w-8 h-8" />
-          <span>ENG</span>
-        </Link>
-      )}
     </div>
   )
 }

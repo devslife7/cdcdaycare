@@ -47,7 +47,7 @@ export default function Navbar({ dictionary }: { dictionary: any }) {
                 <span className="text-primary">CDC</span> Day Care
               </span>
             </ScrollLink>
-            <div className="ml-4 lg:hidden px-2">
+            <div className="ml-4 px-2">
               {dictionary.locale === "en" ? (
                 <Link href="/es/home" className="flex items-center" scroll={false}>
                   <EspFlag className="w-6 mr-2 inline" />
