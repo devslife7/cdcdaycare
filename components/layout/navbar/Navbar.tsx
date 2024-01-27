@@ -42,24 +42,24 @@ export default function Navbar({ dictionary }: { dictionary: any }) {
       >
         <nav className="flex items-center justify-between h-16 my-container">
           <div className="flex items-center lg:flex-1">
-            <ScrollLink to="hero">
+            <ScrollLink to="hero" className="cursor-pointer">
               <span className="text-xl font-semibold">
                 <span className="text-primary">CDC</span> Day Care
               </span>
             </ScrollLink>
-          </div>
-          <div className="ml-8 lg:hidden">
-            {dictionary.locale === "en" ? (
-              <Link href="/es/home" className="flex items-center" scroll={false}>
-                <EspFlag className="w-8 h-8 mr-2 inline" />
-                <span>ESP</span>
-              </Link>
-            ) : (
-              <Link href="/en/home" className="flex items-center" scroll={false}>
-                <UsFlag className="mr-2 inline w-8 h-8" />
-                <span>ENG</span>
-              </Link>
-            )}
+            <div className="ml-4 lg:hidden px-2">
+              {dictionary.locale === "en" ? (
+                <Link href="/es/home" className="flex items-center" scroll={false}>
+                  <EspFlag className="w-6 mr-2 inline" />
+                  <span>Español</span>
+                </Link>
+              ) : (
+                <Link href="/en/home" className="flex items-center" scroll={false}>
+                  <UsFlag className="mr-2 inline w-6" />
+                  <span>English</span>
+                </Link>
+              )}
+            </div>
           </div>
           <NavLinks dictionary={dictionary} />
           <div className="flex lg:hidden">
