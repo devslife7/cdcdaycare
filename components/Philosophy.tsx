@@ -1,5 +1,5 @@
 import Image from "next/image"
-import philoSection from "@/public/images/cdcboypainting.jpeg"
+import philoSection from "@/public/images/ballpit.jpg"
 import FadeIn from "./ui/fadeIn"
 
 export default function Philosophy({ dictionary }: { dictionary: any }) {
@@ -13,11 +13,7 @@ export default function Philosophy({ dictionary }: { dictionary: any }) {
           </h2>
           <p className="text-lg font-extralight leading-10 text-primary-100">{dictionary.subtitle}</p>
         </div>
-        <Image
-          className="mx-auto shadow-custom-right shadow-primary"
-          src={philoSection}
-          alt="Child doing homework"
-        />
+        <Image className="mx-auto shadow-custom-right shadow-primary" src={philoSection} alt="Child doing homework" />
       </FadeIn>
     </section>
   )
