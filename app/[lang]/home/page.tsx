@@ -11,13 +11,13 @@ export default async function Main({ params: { lang } }: { params: { lang: strin
   const dict = await getDictionary(lang)
   return (
     <>
-      <Navbar dictionary={dict.navbar} />
-      <Hero dictionary={dict.hero} />
-      <KeyPoints dictionary={dict.keypoints} />
-      <Philosophy dictionary={dict.philosophy} />
+      {/* <Navbar dictionary={dict.navbar} /> */}
+      {/* <Hero dictionary={dict.hero} /> */}
+      {/* <KeyPoints dictionary={dict.keypoints} /> */}
+      {/* <Philosophy dictionary={dict.philosophy} /> */}
       <AboutUs dictionary={dict.about} />
-      <ContactUs dictionary={dict.contact} />
-      <Footer />
+      {/* <ContactUs dictionary={dict.contact} /> */}
+      {/* <Footer /> */}
     </>
   )
 }

@@ -1,5 +1,5 @@
 import Image from "next/image"
-import philoSection from "@/public/images/ballpit.jpg"
+import philoSection from "@/public/images/ball-pit.jpg"
 import FadeIn from "./ui/fadeIn"
 
 export default function Philosophy({ dictionary }: { dictionary: any }) {
